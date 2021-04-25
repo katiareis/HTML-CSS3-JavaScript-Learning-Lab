@@ -7,16 +7,19 @@
     <title>Current Time</title> <!-- A tag title podemos add o título do site, que aparece na aba superior -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body> <!-- A tag <body> é onde colocamos tudo que vai aparecer no corpo do site -->
+<body onload="carregar()">
     <header>
-        <h1>Current Time</h1>
+        <h1>Current Time</h1> 
     </header>
     <section>
-        <div>
-            Now it is ...
+        <div id="mensagem">
+            msg1
         </div>
-        <div>
-            Picture 
+        <div id="greeting">
+            msg2
+        </div>
+        <div id="picture">
+            <img id="picture" src="/image/morning.jpg" alt="sun rising">
         </div>        
     </section>
     <footer>
