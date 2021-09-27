@@ -7,40 +7,41 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!--  Link to External Pages with Anchor Elements
-    You can use a (anchor) elements to link to content outside of your web page. <a> elements need a destination web address called an href attribute. They also need anchor text.   -->
+    <!--  Nest an Anchor Element within a Paragraph
+    You can nest links within other text elements. Example:  
+    <p>
+    Here's a <a target="_blank" href="https://www.freecodecamp.org"> link to www.freecodecamp.org</a> for you to follow.
+    </p>
+
+    target is an anchor tag attribute that specifies where to open the link. The value _blank specifies to open the link in a new tab. The href is an anchor tag attribute that contains the URL address of the link.
+
+    The text, link to www.freecodecamp.org, within the a element is called anchor text, and will display the link to click
+    -->
 
     <h1>CatPhotoApp</h1>
     <h2>Introduction to HTML5 Elements</h2>
 
-    <!-- The HTML <a> Tag.
-
-    The <a> tag defines a hyperlink, which is used to link from one page to another.
-
-    The most important attribute of the <a> element is the href attribute, which indicates the link's destination.
-
-    By default, links will appear as follows in all browsers:
-
-    An unvisited link is underlined and blue
-    A visited link is underlined and purple
-    An active link is underlined and red
-
-    target attribute specifies where to open the linked document:
-    _blank
-    _parent
-    _self
-    _top
-
+    <!-- Nest the existing a element within a new p element. Do not create a new anchor tag. The new paragraph should have text that says View more cat photos, where cat photos is a link, and the rest is plain text.
     -->
 
+    <a href="#footer">Jump to Bottom</a>
+
     <main>
-      <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>
+      <p>
+        View more cat photos
+        <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos</a>
+      </p>
 
       <img
         src="https://www.bit.ly/fcc-relaxing-cat"
         alt="A cute orange cat lying on its back."
       />
+
       <p>
+        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+        attack your ankles chase the red dot, hairball run catnip eat the grass
+        sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
+        everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
         Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
         attack your ankles chase the red dot, hairball run catnip eat the grass
         sniff.
@@ -49,7 +50,30 @@
       <p>
         Purr jump eat the grass rip the couch scratched sunbathe, shed
         everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+        attack your ankles chase the red dot, hairball run catnip eat the grass
+        sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
+        everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+      </p>
+
+      <p>
+        Meowwww loved it, hated it, loved it, hated it yet spill litter box,
+        scratch at owner, destroy all furniture, especially couch or lay on arms
+        while you're using the keyboard. Missing until dinner time toy mouse
+        squeak roll over. With tail in the air lounge in doorway. Man running
+        from cops stops to pet cats, goes to jail.
+      </p>
+
+      <p>
+        Intently stare at the same spot poop in the plant pot but kitten is
+        playing with dead mouse. Get video posted to internet for chasing red
+        dot leave fur on owners clothes meow to be let out and mesmerizing birds
+        leave fur on owners clothes or favor packaging over toy so purr for no
+        reason. Meow to be let out play time intently sniff hand run outside as
+        soon as door open yet destroy couch.
       </p>
     </main>
+
+    <footer id="footer">Copyright Cat Photo App</footer>
   </body>
 </html>
