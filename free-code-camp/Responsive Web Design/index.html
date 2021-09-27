@@ -7,26 +7,35 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!--  Add Images to Your Website
-    All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
-
-    Note: If the image is purely decorative, using an empty alt attribute is a best practice.
-
-    Ideally the alt attribute should not contain special characters unless needed. -->
+    <!--  Link to External Pages with Anchor Elements
+    You can use a (anchor) elements to link to content outside of your web page. <a> elements need a destination web address called an href attribute. They also need anchor text.   -->
 
     <h1>CatPhotoApp</h1>
     <h2>Introduction to HTML5 Elements</h2>
 
-    <!-- The <img> tag is used to embed an image in an HTML page.
+    <!-- The HTML <a> Tag.
 
-    Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.
+    The <a> tag defines a hyperlink, which is used to link from one page to another.
 
-    The <img> tag has two required attributes:
+    The most important attribute of the <a> element is the href attribute, which indicates the link's destination.
 
-    src - Specifies the path to the image
-    alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed -->
+    By default, links will appear as follows in all browsers:
+
+    An unvisited link is underlined and blue
+    A visited link is underlined and purple
+    An active link is underlined and red
+
+    target attribute specifies where to open the linked document:
+    _blank
+    _parent
+    _self
+    _top
+
+    -->
 
     <main>
+      <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>
+
       <img
         src="https://www.bit.ly/fcc-relaxing-cat"
         alt="A cute orange cat lying on its back."
