@@ -7,18 +7,22 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!--  Make Dead Links Using the Hash Symbol
-    Sometimes you want to add a elements to your website before you know where they will link.
+    <!--  Turn an Image into a Link - Using the Hash Symbol
+    You can make elements into links by nesting them within an a element.
 
-    This is also handy when you're changing the behavior of a link using JavaScript, which we'll learn about later.
+    Nest your image within an a element. Here's an example:
+
+    <a href="#">
+    <img src="https://www.bit.ly/fcc-running-cats" alt="Three kittens running towards the camera.">
+    </a>
     -->
 
     <h1>CatPhotoApp</h1>
     <h2>Introduction to HTML5 Elements</h2>
 
-    <!-- The current value of the href attribute is a link that points to "https://www.freecatphotoapp.com". Replace the href attribute value with a #, also known as a hash symbol, to create a dead link.
+    <!-- Place the existing image element within an a (anchor) element.
 
-    For example: href="#"
+    Once you've done this, hover over your image with your cursor. Your cursor's normal pointer should become the link clicking pointer. The photo is now a link.
     -->
 
     <a href="#footer">Jump to Bottom</a>
@@ -48,7 +52,11 @@
         attack your ankles chase the red dot, hairball run catnip eat the grass
         sniff.
       </p>
-
+      <a href="#">
+        <img
+          src="https://www.bit.ly/fcc-running-cats"
+          alt="Three kittens running towards the camera."
+      /></a>
       <p>
         Purr jump eat the grass rip the couch scratched sunbathe, shed
         everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
