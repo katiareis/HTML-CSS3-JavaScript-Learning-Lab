@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Web Design Course - freeCodeCamp</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="../Responsive Web Design/style.css" />
 
     <style>
+      h1 {
+        font-family: Lobster, serif;
+      }
+
       h2 {
         color: blue;
       }
@@ -23,25 +32,29 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Font Family 
+    <!--  Basic CSS - Google Fonts 
 
-    The CSS font-family Property
-    In CSS, we use the font-family property to specify the font of a text.
-    
-    Set the Font Family of an Element
-    You can set which font an element should use, by using the font-family property.
+    In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website. There are many sources for web fonts on the Internet. For this example we will focus on the Google Fonts library.
 
-    For example, if you wanted to set your h2 element's font to sans-serif, you would use the following CSS:
+    Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.
 
-    h2 {
-      font-family: sans-serif;
-    }
+    So, let's go ahead and import and apply a Google font (note that if Google is blocked in your country, you will need to skip this challenge).
+
+    To import a Google Font, you can copy the font's URL from the Google Fonts library and then paste it in your HTML. For this challenge, we'll import the Lobster font. To do this, copy the following code snippet and paste it into the top of your code editor (before the opening style element):
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    Now you can use the Lobster font in your CSS by using Lobster as the FAMILY_NAME as in the following example:
+
+    font-family: FAMILY_NAME, GENERIC_NAME;
+    The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available. This is covered in the next challenge.
+
+    Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For example, you need quotes to use the "Open Sans" font, but not to use the Lobster font.
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Make all of your p elements use the monospace font.
+    <!-- Import the Lobster font to your web page. Then, use an element selector to set Lobster as the font-family for your h1 element.
     -->
 
     <a href="#footer">Jump to Bottom</a>
