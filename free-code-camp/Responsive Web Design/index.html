@@ -7,30 +7,22 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!--  Text Field with Web form.
-    Now let's create a web form:
+    <!--  <form> Form Element.
 
-    -Text Field
-    input elements are a convenient way to get input from your user.
+    You can build web forms that actually submit data to a server using nothing more than pure HTML. You can do this by specifying an action attribute on your form element.
 
-    You can create a text input like this:
-    <input type="text">
-    Note that input elements are self-closing.
+    For example:
 
-    -Placeholder text is what is displayed in your input element before your user has inputted anything.
-
-    You can create placeholder text like so:
-    <input type="text" placeholder="this is placeholder text">
-    Note: Remember that input elements are self-closing.
-
+    <form action="/url-where-you-want-to-submit-form-data">
+      <input>
+    </form>
 
     -->
 
     <h1>CatPhotoApp</h1>
     <h2>Introduction to HTML5 Elements</h2>
 
-    <!-- -Create an input element of type text below your lists.
-         -Set the placeholder value of your text input to "cat photo URL".
+    <!-- -Nest the existing input element inside a form element and assign "https://www.freecatphotoapp.com/submit-cat-photo" to the action attribute of the form element.
 
     -->
 
@@ -109,7 +101,9 @@
         soon as door open yet destroy couch.
       </p>
 
-      <input type="text" placeholder="cat photo URL" />
+      <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+        <input type="text" placeholder="cat photo URL" />
+      </form>
     </main>
 
     <footer id="footer">Copyright Cat Photo App</footer>
