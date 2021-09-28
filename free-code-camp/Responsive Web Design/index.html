@@ -15,42 +15,44 @@
       .red-text {
         color: red;
       }
+
+      p {
+        font-size: 16px;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - HTML class Attribute
-    The HTML class attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class.
+    <!--  Basic CSS - Font Size
+    The font-size property sets the size of the text.
 
-    - Use a CSS Class to Style an Element
-    Classes are reusable styles that can be added to HTML elements.
+    The font-size value can be an absolute, or relative size.
 
-    Here's an example CSS class declaration:
+    Absolute size:
 
-    <style>
-      .blue-text {
-        color: blue;
-      }
-    </style>
-
-    You can see that we've created a CSS class called blue-text within the <style> tag. 
+    -Sets the text to a specified size
+    -Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+    -Absolute size is useful when the physical size of the output is known
     
-    You can apply a class to an HTML element like this: <h2 class="blue-text">CatPhotoApp</h2>. 
-      
-    Note that in your CSS style element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.
+    Relative size:
 
-    - Style Multiple Elements with a CSS Class
-    
-    Different HTML elements can point to the same class name.
-    Classes allow you to use the same CSS styles on multiple HTML elements. You can see this by applying your red-text class to others <p> elements.
+    -Sets the size relative to surrounding elements
+    -Allows a user to change the text size in browsers
+
+    Note: If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).
+
+    Change the Font Size of an Element
+    Font size is controlled by the font-size CSS property, like this:
+
+    h1 {
+      font-size: 30px;
+    }
 
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Inside your style element, change the h2 selector to .red-text and update the color's value from blue to red.
-
-    Give your h2 element the class attribute with a value of red-text.
+    <!-- Inside the same <style> tag that contains your red-text class, create an entry for p elements and set the font-size to 16 pixels (16px=1em).
     -->
 
     <a href="#footer">Jump to Bottom</a>
