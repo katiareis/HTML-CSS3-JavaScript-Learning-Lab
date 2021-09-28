@@ -7,24 +7,31 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!--  Ordered List
-    HTML has another special element for creating ordered lists, or numbered lists.
+    <!--  Text Field with Web form.
+    Now let's create a web form:
 
-    Ordered lists start with an opening <ol> element, followed by any number of <li> elements. Finally, ordered lists are closed with the </ol> tag.
+    -Text Field
+    input elements are a convenient way to get input from your user.
 
-    For example:
+    You can create a text input like this:
+    <input type="text">
+    Note that input elements are self-closing.
 
-    <ol>
-      <li>Garfield</li>
-      <li>Sylvester</li>
-    </ol>
-    would create a numbered list of Garfield and Sylvester.
+    -Placeholder text is what is displayed in your input element before your user has inputted anything.
+
+    You can create placeholder text like so:
+    <input type="text" placeholder="this is placeholder text">
+    Note: Remember that input elements are self-closing.
+
+
     -->
 
     <h1>CatPhotoApp</h1>
     <h2>Introduction to HTML5 Elements</h2>
 
-    <!-- Create an ordered list of the top 3 things cats hate the most.
+    <!-- -Create an input element of type text below your lists.
+         -Set the placeholder value of your text input to "cat photo URL".
+
     -->
 
     <a href="#footer">Jump to Bottom</a>
@@ -78,13 +85,6 @@
         <li>lasagna</li>
       </ul>
 
-      <p>Top 3 things cats hate:</p>
-      <ol>
-        <li>flea treatment</li>
-        <li>thunder</li>
-        <li>other cats</li>
-      </ol>
-
       <p>
         Meowwww loved it, hated it, loved it, hated it yet spill litter box,
         scratch at owner, destroy all furniture, especially couch or lay on arms
@@ -93,6 +93,13 @@
         from cops stops to pet cats, goes to jail.
       </p>
 
+      <h3>Top 3 things cats hate:</h3>
+
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
       <p>
         Intently stare at the same spot poop in the plant pot but kitten is
         playing with dead mouse. Get video posted to internet for chasing red
@@ -101,6 +108,8 @@
         reason. Meow to be let out play time intently sniff hand run outside as
         soon as door open yet destroy couch.
       </p>
+
+      <input type="text" placeholder="cat photo URL" />
     </main>
 
     <footer id="footer">Copyright Cat Photo App</footer>
