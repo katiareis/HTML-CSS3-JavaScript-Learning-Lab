@@ -7,21 +7,18 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!--  Nest an Anchor Element within a Paragraph
-    You can nest links within other text elements. Example:  
-    <p>
-    Here's a <a target="_blank" href="https://www.freecodecamp.org"> link to www.freecodecamp.org</a> for you to follow.
-    </p>
+    <!--  Make Dead Links Using the Hash Symbol
+    Sometimes you want to add a elements to your website before you know where they will link.
 
-    target is an anchor tag attribute that specifies where to open the link. The value _blank specifies to open the link in a new tab. The href is an anchor tag attribute that contains the URL address of the link.
-
-    The text, link to www.freecodecamp.org, within the a element is called anchor text, and will display the link to click
+    This is also handy when you're changing the behavior of a link using JavaScript, which we'll learn about later.
     -->
 
     <h1>CatPhotoApp</h1>
     <h2>Introduction to HTML5 Elements</h2>
 
-    <!-- Nest the existing a element within a new p element. Do not create a new anchor tag. The new paragraph should have text that says View more cat photos, where cat photos is a link, and the rest is plain text.
+    <!-- The current value of the href attribute is a link that points to "https://www.freecatphotoapp.com". Replace the href attribute value with a #, also known as a hash symbol, to create a dead link.
+
+    For example: href="#"
     -->
 
     <a href="#footer">Jump to Bottom</a>
@@ -30,6 +27,11 @@
       <p>
         View more cat photos
         <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos</a>
+      </p>
+
+      <p>
+        View more cat photos
+        <a href="#" target="_blank">Cat photos</a>
       </p>
 
       <img
