@@ -25,37 +25,29 @@
 
     Now that you've described the structure of your cat photo app, give it some style with CSS.
 
-    - Internal CSS
-    An internal CSS is used to define a style for a single HTML page.
-    An internal CSS is defined in the <head> section of an HTML page, within a <style> element.
+    - External CSS
+    An external CSS is used to define a style for many HTML pages.
+    To use an external style sheet, add a link to it in the <head> section of each HTML page:
 
-    CSS Selectors to Style Elements
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
 
-    With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page.
+      <h1>This is a heading</h1>
+      <p>This is a paragraph.</p>
 
-    When you entered <h2 style="color: red;"></h2>, you were styling that individual h2 element with inline CSS, which stands for Cascading Style Sheets.
+      </body>
+      </html>
 
-    That's one way to specify the style of an element, but there's a better way to apply CSS.
-
-    At the top of your code, create a style block like this:
-
-    <style>
-    </style>
-    Inside that style block, you can create a CSS selector for all h2 elements. For example, if you wanted all h2 elements to be red, you would add a style rule that looks like this:
-
-    <style>
-      h2 {
-        color: red;
-      }
-    </style>
-
-    Note that it's important to have both opening and closing curly braces ({ and }) around each element's style rule(s). You also need to make sure that your element's style definition is between the opening and closing style tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Create a CSS style block. Add the necessary CSS to turn all h2 elements blue.
+    <!-- Create a CSS style file. Add the necessary CSS to turn all p elements darkgreen.
     -->
 
     <a href="#footer">Jump to Bottom</a>
@@ -67,7 +59,7 @@
       </p>
 
       <p>
-        View more cat photos
+        Click here to view more
         <a href="#" target="_blank">Cat photos</a>
       </p>
 
