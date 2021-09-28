@@ -29,42 +29,54 @@
         font-size: 16px;
         font-family: monospace;
       }
+
+      .smaller-image {
+        width: 100px;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Font Fallbacks 
+    <!--  Basic CSS - Setting height and width
 
-    There are several default fonts that are available in all browsers. These generic font families include monospace, serif and sans-serif.
+    The CSS height and width properties are used to set the height and width of an element.
+    The CSS max-width property is used to set the maximum width of an element.
 
-    When one font isn't available, you can tell the browser to "degrade" to another font.
+    The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
 
-    For example, if you wanted an element to use the Helvetica font, but degrade to the sans-serif font when Helvetica isn't available, you will specify it as follows:
+    Size Your Images
 
-    p {
-      font-family: Helvetica, sans-serif;
-    }
+    CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.
 
-    Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
-    
-    Commonly Used Font Fallbacks
-    Below are some commonly used font fallbacks, organized by the 5 generic font families:
+    For example, if we wanted to create a CSS class called larger-image that gave HTML elements a width of 500 pixels, we'd use:
 
-    Serif
-    Sans-serif
-    Monospace
-    Cursive
-    Fantasy
+    <style>
+      .larger-image {
+        width: 500px;
+      }
+    </style>
 
+    CSS height and width Values
+    The height and width properties may have the following values:
+
+    auto - This is default. The browser calculates the height and width
+    length - Defines the height/width in px, cm etc.
+    % - Defines the height/width in percent of the containing block
+    initial - Sets the height/width to its default value
+    inherit - The height/width will be inherited from its parent value
+
+    Setting max-width
+    The max-width property is used to set the maximum width of an element.
+
+    The max-width can be specified in length values, like px, cm, etc., or in percent (%) of the containing block, or set to none (this is default. Means that there is no maximum width).    
+
+    Note: If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property will be used (and the width property will be ignored).
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- To begin, apply the monospace font to the h1 element, so that it now has two fonts - Lobster and monospace.
+    <!-- Create a class called smaller-image and use it to resize the images so that it's only 100 pixels wide.
 
-    In the last challenge, you imported the Lobster font using the link tag. Now comment out that import of the Lobster font (using the HTML comments you learned before) from Google Fonts so that it isn't available anymore. Notice how your h2 element degrades to the monospace font.
-
-    Note: If you have the Lobster font installed on your computer, you won't see the degradation because your browser is able to find the font.
     -->
 
     <a href="#footer">Jump to Bottom</a>
@@ -81,6 +93,7 @@
       </p>
 
       <img
+        class="smaller-image"
         src="https://www.bit.ly/fcc-relaxing-cat"
         alt="A cute orange cat lying on its back."
       />
