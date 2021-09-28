@@ -11,49 +11,47 @@
       h2 {
         color: blue;
       }
+
+      .red-text {
+        color: red;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS
-    CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements.
+    <!--  Basic CSS - HTML class Attribute
+    The HTML class attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class.
 
-    CSS can be added to HTML documents in 3 ways:
+    Use a CSS Class to Style an Element
+    Classes are reusable styles that can be added to HTML elements.
 
-    Inline - by using the style attribute inside HTML elements
-    Internal - by using a <style> element in the <head> section
-    External - by using a <link> element to link to an external CSS file
+    Here's an example CSS class declaration:
 
-    Now that you've described the structure of your cat photo app, give it some style with CSS.
+    <style>
+      .blue-text {
+        color: blue;
+      }
+    </style>
 
-    - External CSS
-    An external CSS is used to define a style for many HTML pages.
-    To use an external style sheet, add a link to it in the <head> section of each HTML page:
-
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <link rel="stylesheet" href="styles.css">
-      </head>
-      <body>
-
-      <h1>This is a heading</h1>
-      <p>This is a paragraph.</p>
-
-      </body>
-      </html>
+    You can see that we've created a CSS class called blue-text within the <style> tag. 
+    
+    You can apply a class to an HTML element like this: <h2 class="blue-text">CatPhotoApp</h2>. 
+      
+    Note that in your CSS style element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.
 
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Create a CSS style file. Add the necessary CSS to turn all p elements darkgreen.
+    <!-- Inside your style element, change the h2 selector to .red-text and update the color's value from blue to red.
+
+    Give your h2 element the class attribute with a value of red-text.
     -->
 
     <a href="#footer">Jump to Bottom</a>
 
     <main>
-      <p>
+      <p class="red-text">
         View more cat photos
         <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos</a>
       </p>
@@ -128,6 +126,11 @@
         reason. Meow to be let out play time intently sniff hand run outside as
         soon as door open yet destroy couch.
       </p>
+
+      <img
+        src="https://www.freecatphotoapp.com/your-image.jpg"
+        alt="A business cat wearing a necktie."
+      />
 
       <form action="https://www.freecatphotoapp.com/submit-cat-photo">
         <label for="indoor">
