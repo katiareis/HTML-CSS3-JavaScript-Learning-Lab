@@ -44,48 +44,49 @@
       .silver-background {
         background-color: silver;
       }
+
+      #cat-photo-form {
+        background-color: green;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Backgrounds
+    <!--  Basic CSS - The id Selector
+    
+    In addition to classes, each HTML element can also have an id attribute.
 
-    The CSS background properties are used to add background effects for elements.
-      
-      CSS background-color
-      The background-color property specifies the background color of an element. You can set the background color for any HTML elements.
+    The id selector uses the id attribute of an HTML element to select a specific element.
 
-      You can set an element's background color with the background-color property.
+    The id of an element is unique within a page, so the id selector is used to select one unique element!
 
-      For example, if you wanted an element's background color to be green, you'd put this within your style element:
+    To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+    Note: An id name cannot start with a number!
 
-      .green-background {
-        background-color: green;
-      }
+    There are several benefits to using id attributes: You can use an id to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.
 
-      CSS background-image
-      The background-image property specifies an image to use as the background of an element.
-      By default, the image is repeated so it covers the entire element.
+    id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same id attribute.
 
-      CSS background-repeat
-      By default, the background-image property repeats an image both horizontally and vertically.
-      Some images should be repeated only horizontally or vertically, or they will look strange.
+    Here's an example of how you give your h2 element the id of cat-photo-app:
+    <h2 id="cat-photo-app">
 
-      CSS background-attachment
-      The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page).
+    One cool thing about id attributes is that, like classes, you can style them using CSS.
 
-      CSS background - Shorthand property
-      To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+    However, an id is not reusable and should only be applied to one element. An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
 
-      body {
-        background: #ffffff url("img_tree.png") no-repeat right top;
-      }
+    Here's an example of how you can take your element with the id attribute of cat-photo-element and give it the background color of green. In your style element:
+
+    #cat-photo-element {
+      background-color: green;
+    }
+    Note that inside your style element, you always reference classes by putting a . in front of their names. You always reference ids by putting a # in front of their names.
+
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Create a class called silver-background with the background-color of silver. Assign this class to your div element.
-
+    <!-- Give your form element the id cat-photo-form.
+         Try giving your form, which now has the id attribute of cat-photo-form, a green background.
     -->
 
     <a href="#footer">Jump to Bottom</a>
@@ -173,7 +174,10 @@
         alt="A business cat wearing a necktie."
       />
 
-      <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+      <form
+        id="cat-photo-form"
+        action="https://www.freecatphotoapp.com/submit-cat-photo"
+      >
         <label for="indoor">
           <input
             type="radio"
