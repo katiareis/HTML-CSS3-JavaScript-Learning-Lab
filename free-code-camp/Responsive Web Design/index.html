@@ -33,49 +33,72 @@
       .smaller-image {
         width: 100px;
       }
+
+      .thick-green-border {
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Setting height and width
+    <!--  Basic CSS - Borders
+    
+    The CSS border properties allow you to specify the style, width, and color of an element's border.
+    
+    CSS Border Style
+      The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
 
-    The CSS height and width properties are used to set the height and width of an element.
-    The CSS max-width property is used to set the maximum width of an element.
+      dotted - Defines a dotted border
+      dashed - Defines a dashed border
+      solid - Defines a solid border
+      double - Defines a double border
+      groove - Defines a 3D grooved border. The effect depends on the border-color value
+      ridge - Defines a 3D ridged border. The effect depends on the border-color value
+      inset - Defines a 3D inset border. The effect depends on the border-color value
+      outset - Defines a 3D outset border. The effect depends on the border-color value
+      none - Defines no border
+      hidden - Defines a hidden border
 
-    The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
+    CSS Border Width
+      The border-width property specifies the width of the four borders.
 
-    Size Your Images
+      The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick:
 
-    CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.
+    CSS Border Color
+      The border-color property is used to set the color of the four borders.
 
-    For example, if we wanted to create a CSS class called larger-image that gave HTML elements a width of 500 pixels, we'd use:
+      The color can be set by:
+
+      name - specify a color name, like "red"
+      HEX - specify a HEX value, like "#ff0000"
+      RGB - specify a RGB value, like "rgb(255,0,0)"
+      HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+      transparent
+      Note: If border-color is not set, it inherits the color of the element.
+
+    Add Borders Around Your Elements
+    CSS borders have properties like style, color and width.
+
+    For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:
 
     <style>
-      .larger-image {
-        width: 500px;
+      .thin-red-border {
+        border-color: red;
+        border-width: 5px;
+        border-style: solid;
       }
     </style>
-
-    CSS height and width Values
-    The height and width properties may have the following values:
-
-    auto - This is default. The browser calculates the height and width
-    length - Defines the height/width in px, cm etc.
-    % - Defines the height/width in percent of the containing block
-    initial - Sets the height/width to its default value
-    inherit - The height/width will be inherited from its parent value
-
-    Setting max-width
-    The max-width property is used to set the maximum width of an element.
-
-    The max-width can be specified in length values, like px, cm, etc., or in percent (%) of the containing block, or set to none (this is default. Means that there is no maximum width).    
-
-    Note: If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property will be used (and the width property will be ignored).
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Create a class called smaller-image and use it to resize the images so that it's only 100 pixels wide.
+    <!-- Create a class called thick-green-border. This class should add a 10px, solid, green border around an HTML element. Apply the class to your cat photo.
+
+    Remember that you can apply multiple classes to an element using its class attribute, by separating each class name with a space. For example:
+
+    <img class="class1 class2">
 
     -->
 
@@ -93,7 +116,7 @@
       </p>
 
       <img
-        class="smaller-image"
+        class="smaller-image thick-green-border"
         src="https://www.bit.ly/fcc-relaxing-cat"
         alt="A cute orange cat lying on its back."
       />
