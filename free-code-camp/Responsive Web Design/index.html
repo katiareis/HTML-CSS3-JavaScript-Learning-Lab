@@ -51,42 +51,92 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - The id Selector
+    <!--  Basic CSS - The Box Model
     
-    In addition to classes, each HTML element can also have an id attribute.
+    All HTML elements are essentially little rectangles. These elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
 
-    The id selector uses the id attribute of an HTML element to select a specific element.
+    The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
 
-    The id of an element is unique within a page, so the id selector is used to select one unique element!
+    Three important properties control the space that surrounds each HTML element: padding, border, and margin.
 
-    To select an element with a specific id, write a hash (#) character, followed by the id of the element.
-    Note: An id name cannot start with a number!
+    An element's padding controls the amount of space between the element's content and its border.
 
-    There are several benefits to using id attributes: You can use an id to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.
+    Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red box has more padding than the blue box.
 
-    id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same id attribute.
+    When you increase the blue box's padding, it will increase the distance (padding) between the text and the border around it.
 
-    Here's an example of how you give your h2 element the id of cat-photo-app:
-    <h2 id="cat-photo-app">
+    Explanation of the different parts:
 
-    One cool thing about id attributes is that, like classes, you can style them using CSS.
+      Content - The content of the box, where text and images appear
+      Padding - Clears an area around the content. The padding is transparent
+      Border - A border that goes around the padding and content
+      Margin - Clears an area outside the border. The margin is transparent
+      The box model allows us to add a border around elements, and to define space between elements. 
 
-    However, an id is not reusable and should only be applied to one element. An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+    Sometimes you will want to customize an element so that it has different amounts of padding, margin or border on each of its sides.
 
-    Here's an example of how you can take your element with the id attribute of cat-photo-element and give it the background color of green. In your style element:
+    CSS allows you to control the padding of all four individual sides of an element with the padding-top, padding-right, padding-bottom, and padding-left properties.
 
-    #cat-photo-element {
-      background-color: green;
-    }
-    Note that inside your style element, you always reference classes by putting a . in front of their names. You always reference ids by putting a # in front of their names.
+    CSS allows you to control the margin of all four individual sides of an element with the margin-top, margin-right, margin-bottom, and margin-left properties.
 
+    Instead of specifying an element's padding-top, padding-right, padding-bottom, and padding-left properties individually, you can specify them all in one line, like this:
+
+    padding: 10px 20px 10px 20px;
+  
+    Let's try this again, but with margin this time.
+
+    Instead of specifying an element's margin-top, margin-right, margin-bottom, and margin-left properties individually, you can specify them all in one line, like this:
+
+    margin: 10px 20px 10px 20px;
+    These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific margin instructions.
+
+    These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific padding instructions.
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Give your form element the id cat-photo-form.
-         Try giving your form, which now has the id attribute of cat-photo-form, a green background.
+    <style>
+      .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+      }
+
+      .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+      }
+
+      .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+      }
+
+      .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .blue-box {
+        background-color: blue;
+        color: #fff;
+        padding: 20px;
+      }
+    </style>
+
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+      <h5 class="box red-box">padding</h5>
+      <h5 class="box blue-box">padding</h5>
+    </div>
+
+    <!-- 
+      Change the padding of your blue box to match that of your red box.(20px)
+
     -->
 
     <a href="#footer">Jump to Bottom</a>
