@@ -40,34 +40,51 @@
         border-style: solid;
         border-radius: 50%;
       }
+
+      .silver-background {
+        background-color: silver;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Rounded Borders
+    <!--  Basic CSS - Backgrounds
 
-    The border-radius property is used to add rounded borders to an element.
-    Example
-      p {
-        border: 2px solid red;
-        border-radius: 5px;
+    The CSS background properties are used to add background effects for elements.
+      
+      CSS background-color
+      The background-color property specifies the background color of an element. You can set the background color for any HTML elements.
+
+      You can set an element's background color with the background-color property.
+
+      For example, if you wanted an element's background color to be green, you'd put this within your style element:
+
+      .green-background {
+        background-color: green;
       }
-    
-    -Add Rounded Corners with border-radius
-    Your cat photo currently has sharp corners. We can round out those corners with a CSS property called border-radius.
-    You can specify a border-radius with pixels. 
 
-    -Make Circular Images with a border-radius
-    In addition to pixels, you can also specify the border-radius using a percentage.
-  
+      CSS background-image
+      The background-image property specifies an image to use as the background of an element.
+      By default, the image is repeated so it covers the entire element.
+
+      CSS background-repeat
+      By default, the background-image property repeats an image both horizontally and vertically.
+      Some images should be repeated only horizontally or vertically, or they will look strange.
+
+      CSS background-attachment
+      The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page).
+
+      CSS background - Shorthand property
+      To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+
+      body {
+        background: #ffffff url("img_tree.png") no-repeat right top;
+      }
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Give your cat photo a border-radius of 10px.
-         Give your cat photo a border-radius of 50%.
-
-    Note: This challenge allows for multiple possible solutions. For example, you may add border-radius to either the .thick-green-border class or the .smaller-image class.
+    <!-- Create a class called silver-background with the background-color of silver. Assign this class to your div element.
 
     -->
 
@@ -113,7 +130,7 @@
         everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
       </p>
 
-      <div>
+      <div class="silver-background">
         <h3>Things cats love</h3>
         <ul>
           <li>milk</li>
@@ -133,7 +150,7 @@
         from cops stops to pet cats, goes to jail.
       </p>
 
-      <div>
+      <div class="silver-background">
         <h3>Top 3 things cats hate:</h3>
         <ol>
           <li>flea treatment</li>
