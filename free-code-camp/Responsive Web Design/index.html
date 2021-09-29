@@ -38,67 +38,36 @@
         border-color: green;
         border-width: 10px;
         border-style: solid;
+        border-radius: 50%;
       }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Borders
-    
-    The CSS border properties allow you to specify the style, width, and color of an element's border.
-    
-    CSS Border Style
-      The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
+    <!--  Basic CSS - Rounded Borders
 
-      dotted - Defines a dotted border
-      dashed - Defines a dashed border
-      solid - Defines a solid border
-      double - Defines a double border
-      groove - Defines a 3D grooved border. The effect depends on the border-color value
-      ridge - Defines a 3D ridged border. The effect depends on the border-color value
-      inset - Defines a 3D inset border. The effect depends on the border-color value
-      outset - Defines a 3D outset border. The effect depends on the border-color value
-      none - Defines no border
-      hidden - Defines a hidden border
-
-    CSS Border Width
-      The border-width property specifies the width of the four borders.
-
-      The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick:
-
-    CSS Border Color
-      The border-color property is used to set the color of the four borders.
-
-      The color can be set by:
-
-      name - specify a color name, like "red"
-      HEX - specify a HEX value, like "#ff0000"
-      RGB - specify a RGB value, like "rgb(255,0,0)"
-      HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
-      transparent
-      Note: If border-color is not set, it inherits the color of the element.
-
-    Add Borders Around Your Elements
-    CSS borders have properties like style, color and width.
-
-    For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:
-
-    <style>
-      .thin-red-border {
-        border-color: red;
-        border-width: 5px;
-        border-style: solid;
+    The border-radius property is used to add rounded borders to an element.
+    Example
+      p {
+        border: 2px solid red;
+        border-radius: 5px;
       }
-    </style>
+    
+    -Add Rounded Corners with border-radius
+    Your cat photo currently has sharp corners. We can round out those corners with a CSS property called border-radius.
+    You can specify a border-radius with pixels. 
+
+    -Make Circular Images with a border-radius
+    In addition to pixels, you can also specify the border-radius using a percentage.
+  
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Create a class called thick-green-border. This class should add a 10px, solid, green border around an HTML element. Apply the class to your cat photo.
+    <!-- Give your cat photo a border-radius of 10px.
+         Give your cat photo a border-radius of 50%.
 
-    Remember that you can apply multiple classes to an element using its class attribute, by separating each class name with a space. For example:
-
-    <img class="class1 class2">
+    Note: This challenge allows for multiple possible solutions. For example, you may add border-radius to either the .thick-green-border class or the .smaller-image class.
 
     -->
 
