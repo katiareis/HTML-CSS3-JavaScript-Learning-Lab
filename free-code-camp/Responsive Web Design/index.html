@@ -59,25 +59,38 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Attribute Selectors
+    <!--  Basic CSS - Absolute versus Relative Units
+    
+      CSS Units
+    
+    CSS has several different units for expressing a length. Many CSS properties take "length" values, such as width, margin, padding, font-size, etc. Length is a number followed by a length unit, such as 10px, 2em, etc.
 
-      You have been adding id or class attributes to elements that you wish to specifically style. These are known as ID and class selectors. There are other CSS Selectors you can use to select custom groups of elements to style.
+    The last several challenges all set an element's margin or padding with pixels (px). Pixels are a type of length unit, which is what tells the browser how to size or space an item. In addition to px, CSS has a number of different length unit options that you can use.
 
-      Style HTML Elements With Specific Attributes
-      It is possible to style HTML elements that have specific attributes or attribute values.
+    The two main types of length units are absolute and relative. 
+    
+    Absolute Lengths
+    The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
 
-      For this challenge, you will use the [attr=value] attribute selector to style the checkboxes in CatPhotoApp. This selector matches and styles elements with a specific attribute value. For example, the below code changes the margins of all elements with the attribute type and a corresponding value of radio:
+    Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.
 
-      [type='radio'] {
-        margin: 20px 0px 20px 0px;
-      }
+    Absolute units tie to physical units of length. For example, in and mm refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.
+
+    Relative Lengths
+    
+    Relative length units specify a length relative to another length property. Relative length units scales better between different rendering mediums.
+
+    Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font. If you use it to set the font-size property itself, it's relative to the parent's font-size.
+
+    Tip: The em and rem units are practical in creating perfectly scalable layout!
+    * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
 
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Using the type attribute selector, try to give the radio and checkboxes in CatPhotoApp a top margin of 10px and a bottom margin of 15px.      
+    <!-- Add a padding property to the element with class red-box and set it to 1.5em in the box-model.html file.   
 
     -->
 
