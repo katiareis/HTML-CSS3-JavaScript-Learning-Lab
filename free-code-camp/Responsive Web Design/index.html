@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../Responsive Web Design/style.css" />
 
     <style>
+      body {
+        background-color: black;
+        color: purple;
+        font-family: monospace;
+      }
       h1 {
         font-family: Lobster, monospace;
       }
@@ -59,38 +64,22 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Absolute versus Relative Units
+    <!--  Basic CSS - CSS inheritance
     
-      CSS Units
+    Inheritance is about how properties trickle down from an element to its children. Certain properties, like font-family inherit. If you set a font-family on the body, that font family will be inherited by all the elements within the body. The same is true for color, but it is not true for background or height which will always default to transparent and auto. In most cases this just makes sense. Why would the background inherit? That would be a pain. What if fonts didn't inherit? What would that even look like?
     
-    CSS has several different units for expressing a length. Many CSS properties take "length" values, such as width, margin, padding, font-size, etc. Length is a number followed by a length unit, such as 10px, 2em, etc.
+    The <body> element defines the document's body, and it is a container for all the visible contents of the page, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Everything that we see on the page is nested inside the body.
 
-    The last several challenges all set an element's margin or padding with pixels (px). Pixels are a type of length unit, which is what tells the browser how to size or space an item. In addition to px, CSS has a number of different length unit options that you can use.
-
-    The two main types of length units are absolute and relative. 
+    We can style the body element just like any other HTML element, and all other elements will inherit body element's styles, unless we style each of them individually.
     
-    Absolute Lengths
-    The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
-
-    Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.
-
-    Absolute units tie to physical units of length. For example, in and mm refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.
-
-    Relative Lengths
-    
-    Relative length units specify a length relative to another length property. Relative length units scales better between different rendering mediums.
-
-    Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font. If you use it to set the font-size property itself, it's relative to the parent's font-size.
-
-    Tip: The em and rem units are practical in creating perfectly scalable layout!
-    * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
-
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2>Basic CSS</h2>
 
-    <!-- Add a padding property to the element with class red-box and set it to 1.5em in the box-model.html file.   
+    <!--  First, let's add a background-color to the body element. Then, let's give all elements on the page the color of purple by adding color: purple; to the body element's style declaration.
+
+    Finally, give body element the font-family of monospace by adding font-family: monospace; to your body element's style declaration.
 
     -->
 
