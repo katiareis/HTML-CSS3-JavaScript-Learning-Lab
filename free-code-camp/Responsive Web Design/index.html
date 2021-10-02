@@ -61,25 +61,54 @@
       [type="checkbox"] {
         margin: 10px 0px 15px 0px;
       }
+      .pink-text {
+        color: pink;
+      }
+
+      .blue-text {
+        color: blue;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - CSS inheritance
-    
-    Inheritance is about how properties trickle down from an element to its children. Certain properties, like font-family inherit. If you set a font-family on the body, that font family will be inherited by all the elements within the body. The same is true for color, but it is not true for background or height which will always default to transparent and auto. In most cases this just makes sense. Why would the background inherit? That would be a pain. What if fonts didn't inherit? What would that even look like?
-    
-    The <body> element defines the document's body, and it is a container for all the visible contents of the page, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Everything that we see on the page is nested inside the body.
+    <!--  Basic CSS - Cascading Order
 
-    We can style the body element just like any other HTML element, and all other elements will inherit body element's styles, unless we style each of them individually.
-    
+    What style will be used when there is more than one style specified for an HTML element?
+
+    All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+
+    Inline style (inside an HTML element)
+    External and internal style sheets (in the head section)
+    Browser default
+    So, an inline style has the highest priority, and will override external and internal styles and browser defaults.
+
+    Sometimes your HTML elements will receive multiple styles that conflict with one another.
+
+    For example, your h1 element can't be both green and pink at the same time.
+
+    Let's see what happens when we create a class that makes text pink, then apply it to an element. Will our class override the body element's color: green; CSS property?    
+       
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
-    <h2>Basic CSS</h2>
+    <h2 class="pink-text blue-text">Basic CSS</h2>
 
-    <!--  First, let's add a background-color to the body element. Then, let's give all elements on the page the color of purple by adding color: purple; to the body element's style declaration.
+    <!--  Create a CSS class called pink-text that gives an element the color pink and aplly it on h2 element.
+    
+    Our pink-text class overrode our body element's CSS declaration!
 
-    Finally, give body element the font-family of monospace by adding font-family: monospace; to your body element's style declaration.
+    We just proved that our classes will override the body element's CSS. So the next logical question is, what can we do to override our pink-text class?
+
+    Create an additional CSS class called blue-text that gives an element the color blue. Make sure it's below your pink-text class declaration.
+
+    Apply the blue-text class to your h2 element in addition to your pink-text class, and let's see which one wins.
+
+    Applying multiple class attributes to a HTML element is done with a space between them like this:
+
+    class="class1 class2"
+    Note: It doesn't matter which order the classes are listed in the HTML element.
+
+    However, the order of the class declarations in the <style> section is what is important. The second declaration will always take precedence over the first. Because .blue-text is declared second, it overrides the attributes of .pink-text
 
     -->
 
