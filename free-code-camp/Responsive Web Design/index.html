@@ -14,7 +14,7 @@
 
     <style>
       body {
-        background-color: #000000;
+        background-color: rgb(0, 0, 0);
         color: #f0f;
         font-family: monospace;
       }
@@ -74,15 +74,27 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - HEX Colors
+    <!--  Basic CSS - RGB Colors
 
-      Use Abbreviated Hex Code
+      Use RGB values to Color Elements
 
-    Many people feel overwhelmed by the possibilities of more than 16 million colors. And it's difficult to remember hex code. Fortunately, you can shorten it.
+    Another way you can represent colors in CSS is by using RGB values.
 
-    For example, red's hex code #FF0000 can be shortened to #F00. This shortened form gives one digit for red, one digit for green, and one digit for blue.
+    The RGB value for black looks like this: rgb(0, 0, 0)
 
-    This reduces the total number of possible colors to around 4,000. But browsers will interpret #FF0000 and #F00 as exactly the same color.
+    The RGB value for white looks like this: rgb(255, 255, 255)
+
+    Instead of using six hexadecimal digits like you do with hex code, with RGB you specify the brightness of each color with a number between 0 and 255.
+
+    If you do the math, the two digits for one color equal 16 times 16, which gives us 256 total values. 
+    
+    So RGB, which starts counting from zero, has the exact same number of possible values as hex code.
+
+    Here's an example of how you'd change the body background to orange using its RGB code.
+
+    body {
+      background-color: rgb(255, 165, 0);
+    }
 
     
     -->
@@ -92,14 +104,8 @@
       Basic CSS
     </h2>
 
-    <!--  Go ahead, try using the abbreviated hex codes to color the correct elements.
+    <!--  Let's replace the hex code in our body element's background color with the RGB value for black: rgb(0, 0, 0)
 
-    Color	Short Hex Code
-    Cyan	#0FF
-    Green	#0F0
-    Red	#F00
-    Fuchsia	#F0F
-    
     -->
 
     <a href="#footer">Jump to Bottom</a>
