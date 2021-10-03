@@ -14,7 +14,7 @@
 
     <style>
       body {
-        background-color: black;
+        background-color: #000000;
         color: purple;
         font-family: monospace;
       }
@@ -23,11 +23,11 @@
       }
 
       h2 {
-        color: blue;
+        color: #1e90ff;
       }
 
       .red-text {
-        color: red;
+        color: #ff0000;
       }
 
       p {
@@ -40,7 +40,7 @@
       }
 
       .thick-green-border {
-        border-color: green;
+        border-color: #00ff00;
         border-width: 10px;
         border-style: solid;
         border-radius: 50%;
@@ -51,7 +51,7 @@
       }
 
       #cat-photo-form {
-        background-color: green;
+        background-color: #00ff00;
       }
 
       [type="radio"] {
@@ -66,78 +66,56 @@
       }
 
       .blue-text {
-        color: blue;
+        color: #1e90ff;
       }
       #orange-text {
-        color: orange;
+        color: #ffa500;
       }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - The !important Rule
-      
-      What is !important?
-    The !important rule in CSS is used to add more importance to a property/value than normal.
+    <!--  Basic CSS - HEX Colors
+      Use Hex Code for Specific Colors
 
-    In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+    Did you know there are other ways to represent colors in CSS? One of these ways is called hexadecimal code, or hex code for short.
 
-    Let us look at an example:
-    #myid {
-      background-color: blue;
+    We usually use decimals, or base 10 numbers, which use the symbols 0 to 9 for each digit. Hexadecimals (or hex) are base 16 numbers. 
+    
+    This means it uses sixteen distinct symbols. Like decimals, the symbols 0-9 represent the values zero to nine. Then A,B,C,D,E,F represent the values ten to fifteen. Altogether, 0 to F can represent a digit in hexadecimal, giving us 16 total possible values.
+
+    In CSS, we can use 6 hexadecimal digits to represent colors, two each for the red (R), green (G), and blue (B) components. For example, #000000 is black and is also the lowest possible value. 
+
+    body {
+      color: #000000;
     }
-
-    .myclass {
-      background-color: gray;
-    }
-
-    p {
-      background-color: red !important;
-    }
-
-
-    Example Explained
-
-    In the example above. all three paragraphs will get a red background color, even though the ID selector and the class selector has a higher specificity. The !important rule overrides the background-color property in both cases.
-
-    Important About !important
-    The only way to override an !important rule is to include another !important rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts! This makes the CSS code confusing and the debugging will be hard, especially if you have a large style sheet!
-
-    Here we have created a simple example. It is not very clear, when you look at the CSS source code, which color is considered most important:
-
-    Example
-    #myid {
-      background-color: blue !important;
-    }
-
-    .myclass {
-      background-color: gray !important;
-    }
-
-    p {
-      background-color: red !important;
-    }
-        -->
+    -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2 style="color: white" id="orange-text" class="pink-text blue-text">
       Basic CSS
     </h2>
 
-    <!--  Override All Other Styles by using Important
+    <!--  Use Hex Code to Mix Colors
 
-    Yay! We just proved that inline styles will override all the CSS declarations in your style element.
+    To review, hex codes use 6 hexadecimal digits to represent colors, two each for red (R), green (G), and blue (B) components.
 
-    But wait. There's one last way to override CSS. This is the most powerful method of all. But before we do it, let's talk about why you would ever want to override CSS.
+    From these three pure colors (red, green, and blue), we can vary the amounts of each to create over 16 million other colors!
 
-    In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you absolutely need to be sure that an element has specific CSS, you can use !important.
+    For example, orange is pure red, mixed with some green, and no blue. In hex code, this translates to being #FFA500.
 
-    Let's go all the way back to our pink-text class declaration. Remember that our pink-text class was overridden by subsequent class declarations, id declarations, and inline styles.
+    The digit 0 is the lowest number in hex code, and represents a complete absence of color.
 
-    Let's add the keyword !important to your pink-text element's color declaration to make 100% sure that your h1 element will be pink.
+    The digit F is the highest number in hex code, and represents the maximum possible brightness.
 
-    An example of how to do this is:
+    Replace the color words in our style element with their correct hex codes.
 
-    color: red !important;
+    Color	Hex Code
+    Dodger Blue	#1E90FF
+    Green	#00FF00
+    Orange	#FFA500
+    Red	#FF0000
+    Black #000000
+
     -->
 
     <a href="#footer">Jump to Bottom</a>
