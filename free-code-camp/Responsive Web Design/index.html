@@ -5,168 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Web Design Course - freeCodeCamp</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lobster"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="../Responsive Web Design/style.css" />
   </head>
   <body>
-    <!--  Basic HTML5 and CSS - Wrap up
+    <!-- Applied Visual Design#
+  Visual design is a combination of typography, color theory, graphics, animation, page layout, and more to help deliver your unique message.
 
-      CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements. -->
-
-    <!-- Now, let's apply everything you've learned so far and add someCSS to the cat photo app.  -->
-
-    <h1 class="title" style="color: red">CatPhotoApp</h1>
-    <h2 class="subtitle">I tawt I taw a puddy tat!</h2>
-
-    <a href="#footer">Jump to Bottom</a>
-
-    <main>
-      <p class="red-text">
-        View more cat photos
-        <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos</a>
-      </p>
-
-      <img
-        class="smaller-image thick-peach-border"
-        src="https://www.bit.ly/fcc-relaxing-cat"
-        alt="A cute orange cat lying on its back."
-      />
-
-      <p>
-        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
-        attack your ankles chase the red dot, hairball run catnip eat the grass
-        sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
-        everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
-        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
-        attack your ankles chase the red dot, hairball run catnip eat the grass
-        sniff.
-      </p>
-      <a href="#">
-        <img
-          src="https://www.bit.ly/fcc-running-cats"
-          alt="Three kittens running towards the camera."
-      /></a>
-      <p>
-        Purr jump eat the grass rip the couch scratched sunbathe, shed
-        everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
-        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
-        attack your ankles chase the red dot, hairball run catnip eat the grass
-        sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
-        everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
-      </p>
-
-      <div class="silver-background">
-        <h3>Things cats love</h3>
-        <ul>
-          <li>milk</li>
-          <li>playing</li>
-          <li>tuna</li>
-          <li>cat nip</li>
-          <li>laser pointers</li>
-          <li>lasagna</li>
-        </ul>
+  In this course, you'll learn how to apply these different elements of visual design to your webpages. -->
+    <style>
+      h4 {
+      }
+      p {
+      }
+      .links {
+        margin-right: 20px;
+      }
+      .fullCard {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+      }
+      .cardContent {
+        padding: 10px;
+      }
+    </style>
+    <div class="fullCard">
+      <div class="cardContent">
+        <div class="cardText">
+          <h4>Google</h4>
+          <p>
+            Google was founded by Larry Page and Sergey Brin while they were
+            Ph.D. students at Stanford University.
+          </p>
+        </div>
+        <div class="cardLinks">
+          <a
+            href="https://en.wikipedia.org/wiki/Larry_Page"
+            target="_blank"
+            class="links"
+            >Larry Page</a
+          >
+          <a
+            href="https://en.wikipedia.org/wiki/Sergey_Brin"
+            target="_blank"
+            class="links"
+            >Sergey Brin</a
+          >
+        </div>
       </div>
-
-      <p>
-        Meowwww loved it, hated it, loved it, hated it yet spill litter box,
-        scratch at owner, destroy all furniture, especially couch or lay on arms
-        while you're using the keyboard. Missing until dinner time toy mouse
-        squeak roll over. With tail in the air lounge in doorway. Man running
-        from cops stops to pet cats, goes to jail.
-      </p>
-
-      <div class="silver-background">
-        <h3>Top 3 things cats hate:</h3>
-        <ol>
-          <li>flea treatment</li>
-          <li>thunder</li>
-          <li>other cats</li>
-        </ol>
-      </div>
-
-      <p>
-        Intently stare at the same spot poop in the plant pot but kitten is
-        playing with dead mouse. Get video posted to internet for chasing red
-        dot leave fur on owners clothes meow to be let out and mesmerizing birds
-        leave fur on owners clothes or favor packaging over toy so purr for no
-        reason. Meow to be let out play time intently sniff hand run outside as
-        soon as door open yet destroy couch.
-      </p>
-
-      <img
-        src="https://www.freecatphotoapp.com/your-image.jpg"
-        alt="A business cat wearing a necktie."
-      />
-
-      <form
-        id="cat-photo-form"
-        action="https://www.freecatphotoapp.com/submit-cat-photo"
-      >
-        <label for="indoor">
-          <input
-            type="radio"
-            name="indoor-outdoor"
-            value="indoor"
-            checked
-          />Indoor
-        </label>
-        <label for="outdoor">
-          <input type="radio" name="indoor-outdoor" value="outdoor" />Outdoor
-        </label>
-        <br />
-
-        <label for="loving">
-          <input
-            id="loving"
-            type="checkbox"
-            name="personality"
-            value="loving"
-            checked
-          />
-          Loving
-        </label>
-        <label for="playfull">
-          <input
-            id="playfull"
-            type="checkbox"
-            name="personality"
-            value="playfull"
-          />
-          Playfull
-        </label>
-        <label for="funny">
-          <input id="funny" type="checkbox" name="personality" value="funny" />
-          Funny
-        </label>
-        <label for="lazy">
-          <input id="lazy" type="checkbox" name="personality" value="lazy" />
-          Lazy
-        </label>
-        <label for="energetic">
-          <input
-            id="energetic"
-            type="checkbox"
-            name="personality"
-            value="energetic"
-          />
-          Energetic
-        </label>
-        <br />
-
-        <input type="text" placeholder="cat photo URL" required />
-        <button type="submit">Submit</button>
-      </form>
-
-      <p class="red-text">
-        Click here to view more
-        <a href="#" target="_blank">Cat photos</a>
-      </p>
-    </main>
-
-    <footer class="footer">Copyright Cat Photo App</footer>
+    </div>
   </body>
 </html>
