@@ -1,31 +1,43 @@
 <style>
-  /*CSS Animation*/
+  /*CSS Variables*/
 
-  /*To make use of inheritance, CSS variables are often defined in the :root element.
-:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
-  :root {
-    --penguin-shadow: gray;
-    --penguin-skin: black; /* Isso é uma variável em CSS*/
-    --penguin-belly: white;
-    --penguin-beak: orange;
-  }
+  /*CSS Variables are a powerful way to change many CSS style properties at once by changing only one value.*/
 
-  /* Responsive Media Queries*/
-  @media (max-width: 350px) {
-    :root {
-      --penguin-size: 200px;
-      --penguin-skin: black;
-    }
-  }
+  /*To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this:
+
+  --penguin-skin: gray;
+  This will create a variable named --penguin-skin and assign it the value of gray. Now you can use that variable elsewhere in your CSS to change the value of other elements to gray.*/
+
+  /*After you create your variable, you can assign its value to other CSS properties by referencing the name you gave it.
+
+  background: var(--penguin-skin);
+  This will change the background of whatever element you are targeting to gray because that is the value of the --penguin-skin variable. Note that styles will not be applied unless the variable names are an exact match.*/
+
+  /* Attach a Fallback value to a CSS Variable
+
+  When using your variable as a CSS property value, you can attach a fallback value that your browser will revert to if the given variable is invalid.
+
+  Note: This fallback is not used to increase browser compatibility, and it will not work on IE browsers. Rather, it is used so that the browser has a color to display if it cannot find your variable.
+
+  Here's how you do it:
+
+  background: var(--penguin-skin, black);
+  
+  This will set background to black if your variable wasn't set. Note that this can be useful for debugging.*/
 
   .penguin {
+    /* Only change code below this line */
+    --penguin-skin: gray; /* This is a CSS variable*/
+    --penguin-belly: white;
+    --penguin-beak: orange;
+    /* Only change code above this line */
+
     position: relative;
     margin: auto;
     display: block;
     margin-top: 5%;
     width: 300px;
     height: 300px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
 
   .penguin-top {
@@ -47,34 +59,14 @@
   }
 
   .right-hand {
-    top: 5%;
-    left: 25%;
+    top: 0%;
+    left: -5%;
     background: var(--penguin-skin, gray);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 120% 30%;
-    transform: rotate(130deg);
+    transform: rotate(45deg);
     z-index: -1;
-    animation-duration: 3s;
-    animation-name: wave;
-    animation-iteration-count: infinite;
-    transform-origin: 0% 0%;
-    animation-timing-function: linear;
-  }
-  /* CSS Animation */
-  @keyframes wave {
-    10% {
-      transform: rotate(110deg);
-    }
-    20% {
-      transform: rotate(130deg);
-    }
-    30% {
-      transform: rotate(110deg);
-    }
-    40% {
-      transform: rotate(130deg);
-    }
   }
 
   .left-hand {
@@ -207,13 +199,7 @@
   .penguin * {
     position: absolute;
   }
-
-  .shadow-floor {
-    background: var(--penguin-shadow, gray);
-    border-radius: 50%;
-  }
 </style>
-
 <div class="penguin">
   <div class="penguin-bottom">
     <div class="right-hand"></div>
@@ -236,5 +222,4 @@
     <div class="beak-top"></div>
     <div class="beak-bottom"></div>
   </div>
-  <div class="shadow-floor"></div>
 </div>
