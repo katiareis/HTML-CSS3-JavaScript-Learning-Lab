@@ -68,47 +68,36 @@
       .blue-text {
         color: blue;
       }
+      #orange-text {
+        color: orange;
+      }
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Cascading Order
+    <!--  Basic CSS - ID Attributes Over Class Declarations
+      Override Class Declarations by Styling ID Attributes
+    We just proved that browsers read CSS from top to bottom in order of their declaration. That means that, in the event of a conflict, the browser will use whichever CSS declaration came last. Notice that if we even had put blue-text before pink-text in our h1 element's classes, it would still look at the declaration order and not the order of their use!
 
-    What style will be used when there is more than one style specified for an HTML element?
+    But we're not done yet. There are other ways that you can override CSS. Do you remember id attributes?
 
-    All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
-
-    Inline style (inside an HTML element)
-    External and internal style sheets (in the head section)
-    Browser default
-    So, an inline style has the highest priority, and will override external and internal styles and browser defaults.
-
-    Sometimes your HTML elements will receive multiple styles that conflict with one another.
-
-    For example, your h1 element can't be both green and pink at the same time.
-
-    Let's see what happens when we create a class that makes text pink, then apply it to an element. Will our class override the body element's color: green; CSS property?    
+    Let's override your pink-text and blue-text classes, and make your h1 element orange, by giving the h1 element an id and then styling that id. 
        
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
-    <h2 class="pink-text blue-text">Basic CSS</h2>
+    <h2 id="orange-text" class="pink-text blue-text">Basic CSS</h2>
 
-    <!--  Create a CSS class called pink-text that gives an element the color pink and aplly it on h2 element.
-    
-    Our pink-text class overrode our body element's CSS declaration!
+    <!--  Give your h2 element the id attribute of orange-text. Remember, id styles look like this:
 
-    We just proved that our classes will override the body element's CSS. So the next logical question is, what can we do to override our pink-text class?
+    <h1 id="orange-text">
+    Leave the blue-text and pink-text classes on your h1 element.
 
-    Create an additional CSS class called blue-text that gives an element the color blue. Make sure it's below your pink-text class declaration.
+    Create a CSS declaration for your orange-text id in your style element. Here's an example of what this looks like:
 
-    Apply the blue-text class to your h2 element in addition to your pink-text class, and let's see which one wins.
-
-    Applying multiple class attributes to a HTML element is done with a space between them like this:
-
-    class="class1 class2"
-    Note: It doesn't matter which order the classes are listed in the HTML element.
-
-    However, the order of the class declarations in the <style> section is what is important. The second declaration will always take precedence over the first. Because .blue-text is declared second, it overrides the attributes of .pink-text
+    #brown-text {
+      color: brown;
+    }
+    Note: It doesn't matter whether you declare this CSS above or below pink-text class, since the id attribute will always take precedence.
 
     -->
 
