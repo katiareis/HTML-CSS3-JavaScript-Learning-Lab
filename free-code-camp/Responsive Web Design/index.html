@@ -62,7 +62,7 @@
         margin: 10px 0px 15px 0px;
       }
       .pink-text {
-        color: pink;
+        color: pink !important;
       }
 
       .blue-text {
@@ -74,35 +74,70 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - Selectors Specificity
-      Specificity Hierarchy
-    Every selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector:
+    <!--  Basic CSS - The !important Rule
+      
+      What is !important?
+    The !important rule in CSS is used to add more importance to a property/value than normal.
 
-    Inline styles - An inline style is attached directly to the element to be styled. Example: <h1 style="color: #ffffff;">.
+    In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
 
-    IDs - An ID is a unique identifier for the page elements, such as #navbar.
+    Let us look at an example:
+    #myid {
+      background-color: blue;
+    }
 
-    Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
+    .myclass {
+      background-color: gray;
+    }
 
-    Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.
+    p {
+      background-color: red !important;
+    }
 
-       
-    -->
+
+    Example Explained
+
+    In the example above. all three paragraphs will get a red background color, even though the ID selector and the class selector has a higher specificity. The !important rule overrides the background-color property in both cases.
+
+    Important About !important
+    The only way to override an !important rule is to include another !important rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts! This makes the CSS code confusing and the debugging will be hard, especially if you have a large style sheet!
+
+    Here we have created a simple example. It is not very clear, when you look at the CSS source code, which color is considered most important:
+
+    Example
+    #myid {
+      background-color: blue !important;
+    }
+
+    .myclass {
+      background-color: gray !important;
+    }
+
+    p {
+      background-color: red !important;
+    }
+        -->
 
     <h1 style="color: red">CatPhotoApp</h1>
     <h2 style="color: white" id="orange-text" class="pink-text blue-text">
       Basic CSS
     </h2>
 
-    <!--  Override Class Declarations with Inline Styles
-    So we've proven that id declarations override class declarations, regardless of where they are declared in your style element CSS.
+    <!--  Override All Other Styles by using Important
 
-    There are other ways that you can override CSS. Do you remember inline styles?
+    Yay! We just proved that inline styles will override all the CSS declarations in your style element.
 
-    Use an inline style to try to make our h2 element white. Remember, inline styles look like this:
+    But wait. There's one last way to override CSS. This is the most powerful method of all. But before we do it, let's talk about why you would ever want to override CSS.
 
-    <h1 style="color: green;">
-    Leave the blue-text and pink-text classes on your h1 element.
+    In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you absolutely need to be sure that an element has specific CSS, you can use !important.
+
+    Let's go all the way back to our pink-text class declaration. Remember that our pink-text class was overridden by subsequent class declarations, id declarations, and inline styles.
+
+    Let's add the keyword !important to your pink-text element's color declaration to make 100% sure that your h1 element will be pink.
+
+    An example of how to do this is:
+
+    color: red !important;
     -->
 
     <a href="#footer">Jump to Bottom</a>
