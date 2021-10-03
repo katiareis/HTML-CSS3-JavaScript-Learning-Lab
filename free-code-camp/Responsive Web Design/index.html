@@ -74,31 +74,35 @@
     </style>
   </head>
   <body>
-    <!--  Basic CSS - ID Attributes Over Class Declarations
-      Override Class Declarations by Styling ID Attributes
-    We just proved that browsers read CSS from top to bottom in order of their declaration. That means that, in the event of a conflict, the browser will use whichever CSS declaration came last. Notice that if we even had put blue-text before pink-text in our h1 element's classes, it would still look at the declaration order and not the order of their use!
+    <!--  Basic CSS - Selectors Specificity
+      Specificity Hierarchy
+    Every selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector:
 
-    But we're not done yet. There are other ways that you can override CSS. Do you remember id attributes?
+    Inline styles - An inline style is attached directly to the element to be styled. Example: <h1 style="color: #ffffff;">.
 
-    Let's override your pink-text and blue-text classes, and make your h1 element orange, by giving the h1 element an id and then styling that id. 
+    IDs - An ID is a unique identifier for the page elements, such as #navbar.
+
+    Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
+
+    Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.
+
        
     -->
 
     <h1 style="color: red">CatPhotoApp</h1>
-    <h2 id="orange-text" class="pink-text blue-text">Basic CSS</h2>
+    <h2 style="color: white" id="orange-text" class="pink-text blue-text">
+      Basic CSS
+    </h2>
 
-    <!--  Give your h2 element the id attribute of orange-text. Remember, id styles look like this:
+    <!--  Override Class Declarations with Inline Styles
+    So we've proven that id declarations override class declarations, regardless of where they are declared in your style element CSS.
 
-    <h1 id="orange-text">
+    There are other ways that you can override CSS. Do you remember inline styles?
+
+    Use an inline style to try to make our h2 element white. Remember, inline styles look like this:
+
+    <h1 style="color: green;">
     Leave the blue-text and pink-text classes on your h1 element.
-
-    Create a CSS declaration for your orange-text id in your style element. Here's an example of what this looks like:
-
-    #brown-text {
-      color: brown;
-    }
-    Note: It doesn't matter whether you declare this CSS above or below pink-text class, since the id attribute will always take precedence.
-
     -->
 
     <a href="#footer">Jump to Bottom</a>
