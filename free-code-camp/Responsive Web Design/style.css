@@ -1,3 +1,63 @@
+:root {
+  --peach-color: #ef9273; /* This is a CSS variable*/
+  --cream-color: #fef9f8;
+  --charcoal-color: #0d0d0d;
+}
+
+body {
+  background-color: #fef9f8;
+  /* This is a CSS variable applied */
+  background-color: var(--cream-color, #fef9f8);
+  color: #0d0d0d;
+  font-family: monospace;
+}
+
+.title {
+  font-family: Lobster, monospace;
+  color: #f00;
+}
+
+.subtitle {
+  color: #ef9273;
+}
+
 p {
-  color: darkgreen;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.smaller-image {
+  width: 100px;
+}
+
+.thick-peach-border {
+  border-color: #ef9273;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.silver-background {
+  background-color: silver;
+}
+
+#cat-photo-form {
+  background-color: silver;
+  padding: 10px 10px 20px 10px;
+}
+
+[type="radio"] {
+  margin: 10px 0px 10px 0px;
+}
+
+[type="checkbox"] {
+  margin: 10px 0px 15px 0px;
+}
+
+.red-text {
+  color: red;
+}
+
+.footer {
+  margin-top: 20px;
 }
