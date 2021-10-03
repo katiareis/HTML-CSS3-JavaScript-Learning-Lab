@@ -1,11 +1,16 @@
 <style>
-  /*CSS Animation*/
+  /*Basic CSS - Variables*/
 
-  /*To make use of inheritance, CSS variables are often defined in the :root element.
-:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+  /*Use a media query to change a variable
+  CSS Variables can simplify the way you use media queries.
+
+  For instance, when your screen is smaller or larger than your media query break point, you can change the value of a variable, and it will apply its style wherever it is used.
+  
+  In the :root selector of the media query, change it so --penguin-size is redefined and given a value of 200px. Also, redefine --penguin-skin and give it a value of black. Then resize the preview to see this change in action.*/
+
   :root {
     --penguin-shadow: gray;
-    --penguin-skin: black; /* Isso é uma variável em CSS*/
+    --penguin-skin: black; /* This is a CSS variable*/
     --penguin-belly: white;
     --penguin-beak: orange;
   }
