@@ -7,25 +7,29 @@
     <title>Responsive Web Design Course - freeCodeCamp - Business Card</title>
   </head>
   <body>
-    <!-- Applied Visual Design - CSS RGBA color values
-      
-      Adjust the background-color Property of Text
+    <!-- Applied Visual Design - HTML Headings
 
-    Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a background-color to the element holding the text you want to emphasize. This challenge uses rgba() instead of hex codes or normal rgb().
+      HTML Headings
 
-    rgba stands for:
-      r = red
-      g = green
-      b = blue
-      a = alpha/level of opacity
+    HTML headings are defined with the <h1> to <h6> tags.
 
-    The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. rgba() is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.
+    <h1> defines the most important heading. 
+    <h6> defines the least important heading.
+    
+    Headings Are Important
+    Search engines use the headings to index the structure and content of your web pages.
+    Users often skim a page by its headings. It is important to use headings to show the document structure.
 
-    You'll use background-color: rgba(45, 45, 45, 0.1) for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1.
+    <h1> headings should be used for main headings, followed by <h2> headings, then the less important <h3>, and so on.
 
-    To make the text stand out more, adjust the background-color of the h4 element to the given rgba() value.
+    Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.
 
-    Also for the h4, remove the height property and add padding of 10px.
+
+      Adjust the Size of a Header Versus a Paragraph Tag
+
+    The font size of header tags (h1 through h6) should generally be larger than the font size of paragraph tags. This makes it easier for the user to visually understand the layout and level of importance of everything on the page. You use the font-size property to adjust the size of the text in an element.
+
+    To make the heading significantly larger than the paragraph, change the font-size of the h4 tag to 27 pixels.
 
     -->
 
@@ -34,6 +38,7 @@
         background-color: rgba(45, 45, 45, 0.1);
         text-align: center;
         padding: 10px;
+        font-size: 27px;
       }
 
       p {
