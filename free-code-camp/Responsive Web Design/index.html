@@ -7,22 +7,18 @@
     <title>Responsive Web Design Course - freeCodeCamp</title>
   </head>
   <body>
-    <!-- Applied Visual Design - CSS Text Alignment
-    Create Visual Balance Using the text-align Property
+    <!-- Applied Visual Design - CSS Width Property
 
-This section of the curriculum focuses on Applied Visual Design. The first group of challenges build on the given card layout to show a number of core principles.
+Adjust the Width of an Element Using the width Property
 
-Text is often a large part of web content. CSS has several options for how to align it with the text-align property.
+You can specify the width of an element using the width property in CSS. Values can be given in relative length units (such as em), absolute length units (such as px), or as a percentage of its containing parent element. Here's an example that changes the width of an image to 220px:
 
-text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
+img {
+  width: 220px;
+}
 
-text-align: center; centers the text
-
-text-align: right; right-aligns the text
-
-And text-align: left; (the default) left-aligns the text.
-
-Align the h4 tag's text, which says "Google", to the center. Then justify the paragraph tag which contains information about how Google was founded. -->
+Add a width property to the entire card and set it to an absolute value of 245px. Use the fullCard class to select the element.
+    -->
 
     <style>
       h4 {
@@ -38,6 +34,7 @@ Align the h4 tag's text, which says "Google", to the center. Then justify the pa
       }
 
       .fullCard {
+        width: 245px;
         border: 1px solid #ccc;
         border-radius: 5px;
         margin: 10px 5px;
