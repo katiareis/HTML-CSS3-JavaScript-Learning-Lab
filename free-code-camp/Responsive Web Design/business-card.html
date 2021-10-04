@@ -7,28 +7,33 @@
     <title>Responsive Web Design Course - freeCodeCamp - Business Card</title>
   </head>
   <body>
-    <!-- Applied Visual Design - HTML <hr> Tag
+    <!-- Applied Visual Design - CSS RGBA color values
       
-      Definition and Usage
+      Adjust the background-color Property of Text
 
-    The <hr> tag defines a thematic break in an HTML page (e.g. a shift of topic).
+    Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a background-color to the element holding the text you want to emphasize. This challenge uses rgba() instead of hex codes or normal rgb().
 
-    The <hr> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page.
+    rgba stands for:
+      r = red
+      g = green
+      b = blue
+      a = alpha/level of opacity
 
-      Create a Horizontal Line Using the hr Element
+    The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. rgba() is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.
 
-    You can use the hr tag to add a horizontal line across the width of its containing element. This can be used to define a change in topic or to visually separate groups of content.
+    You'll use background-color: rgba(45, 45, 45, 0.1) for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1.
 
-    Add an hr tag underneath the h4 which contains the card title.
+    To make the text stand out more, adjust the background-color of the h4 element to the given rgba() value.
 
-    Note: In HTML, hr is a self-closing tag, and therefore doesn't need a separate closing tag.
+    Also for the h4, remove the height property and add padding of 10px.
 
     -->
 
     <style>
       h4 {
+        background-color: rgba(45, 45, 45, 0.1);
         text-align: center;
-        height: 25px;
+        padding: 10px;
       }
 
       p {
