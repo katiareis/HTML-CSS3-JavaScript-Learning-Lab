@@ -7,29 +7,28 @@
     <title>Responsive Web Design Course - freeCodeCamp - Business Card</title>
   </head>
   <body>
-    <!-- Applied Visual Design - HTML Headings
+    <!-- Applied Visual Design - Box-shadow Property
 
-      HTML Headings
+      Add a box-shadow to a Card-like Element
 
-    HTML headings are defined with the <h1> to <h6> tags.
+    The box-shadow property applies one or more shadows to an element.
 
-    <h1> defines the most important heading. 
-    <h6> defines the least important heading.
-    
-    Headings Are Important
-    Search engines use the headings to index the structure and content of your web pages.
-    Users often skim a page by its headings. It is important to use headings to show the document structure.
+    The box-shadow property takes values for
 
-    <h1> headings should be used for main headings, followed by <h2> headings, then the less important <h3>, and so on.
+    offset-x (how far to push the shadow horizontally from the element),
+    offset-y (how far to push the shadow vertically from the element),
+    blur-radius,
+    spread-radius and
+    color, in that order.
+    The blur-radius and spread-radius values are optional.
 
-    Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+    Multiple box-shadows can be created by using commas to separate properties of each box-shadow element.
 
+    Here's an example of the CSS to create multiple shadows with some blur, at mostly-transparent black colors:
 
-      Adjust the Size of a Header Versus a Paragraph Tag
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
-    The font size of header tags (h1 through h6) should generally be larger than the font size of paragraph tags. This makes it easier for the user to visually understand the layout and level of importance of everything on the page. You use the font-size property to adjust the size of the text in an element.
-
-    To make the heading significantly larger than the paragraph, change the font-size of the h4 tag to 27 pixels.
+    The element now has an id of thumbnail. With this selector, use the example CSS values above to place a box-shadow on the card.
 
     -->
 
@@ -47,6 +46,12 @@
 
       .links {
         margin-right: 20px;
+        color: black;
+      }
+
+      #thumbnail {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
       }
 
       .fullCard {
@@ -60,8 +65,12 @@
       .cardContent {
         padding: 10px;
       }
+
+      .cardText {
+        margin-bottom: 30px;
+      }
     </style>
-    <div class="fullCard">
+    <div class="fullCard" id="thumbnail">
       <div class="cardContent">
         <div class="cardText">
           <h4><s>Google</s>Alphabet</h4>
