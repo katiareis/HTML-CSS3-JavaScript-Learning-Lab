@@ -7,28 +7,19 @@
     <title>Responsive Web Design Course - freeCodeCamp - Business Card</title>
   </head>
   <body>
-    <!-- Applied Visual Design - Box-shadow Property
+    <!-- Applied Visual Design - CSS Opacity / Transparency
 
-      Add a box-shadow to a Card-like Element
+      Decrease the Opacity of an Element
 
-    The box-shadow property applies one or more shadows to an element.
+    The opacity property in CSS is used to adjust the opacity, or conversely, the transparency for an item.
 
-    The box-shadow property takes values for
+    A value of 1 is opaque, which isn't transparent at all.
+    A value of 0.5 is half see-through.
+    A value of 0 is completely transparent.
 
-    offset-x (how far to push the shadow horizontally from the element),
-    offset-y (how far to push the shadow vertically from the element),
-    blur-radius,
-    spread-radius and
-    color, in that order.
-    The blur-radius and spread-radius values are optional.
+    The value given will apply to the entire element, whether that's an image with some transparency, or the foreground and background colors for a block of text.
 
-    Multiple box-shadows can be created by using commas to separate properties of each box-shadow element.
-
-    Here's an example of the CSS to create multiple shadows with some blur, at mostly-transparent black colors:
-
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-    The element now has an id of thumbnail. With this selector, use the example CSS values above to place a box-shadow on the card.
+    Set the opacity of the anchor tags to 0.7 using links class to select them.
 
     -->
 
@@ -47,6 +38,7 @@
       .links {
         margin-right: 20px;
         color: black;
+        opacity: 0.7;
       }
 
       #thumbnail {
