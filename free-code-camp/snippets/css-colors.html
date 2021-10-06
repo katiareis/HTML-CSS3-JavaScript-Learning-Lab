@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design Course - freeCodeCamp - CSS Colors</title>
+  </head>
+  <body>
+    <!-- Applied Visual Design - Complementary Colors
+    
+    | Learn about Complementary Colors
+
+    Color theory and its impact on design is a deep topic and only the basics are covered in the following challenges. On a website, color can draw attention to content, evoke emotions, or create visual harmony. Using different combinations of colors can really change the look of a website, and a lot of thought can go into picking a color palette that works with your content.
+
+    The color wheel is a useful tool to visualize how colors relate to each other - it's a circle where similar hues are neighbors and different hues are farther apart. When two colors are opposite each other on the wheel, they are called complementary colors. They have the characteristic that if they are combined, they "cancel" each other out and create a gray color. However, when placed side-by-side, these colors appear more vibrant and produce a strong visual contrast.
+
+    Some examples of complementary colors with their hex codes are:
+
+    red (#FF0000) and cyan (#00FFFF)
+    green (#00FF00) and magenta (#FF00FF)
+    blue (#0000FF) and yellow (#FFFF00)
+    
+    This is different than the outdated RYB color model that many of us were taught in school, which has different primary and complementary colors. Modern color theory uses the additive RGB model (like on a computer screen) and the subtractive CMY(K) model (like in printing). Read here for more information on this complex subject.
+
+    There are many color picking tools available online that have an option to find the complement of a color.
+
+    Note: Using color can be a powerful way to add visual interest to a page. However, color alone should not be used as the only way to convey important information because users with visual impairments may not understand that content. This issue will be covered in more detail in the Applied Accessibility challenges.
+
+    - Change the background-color property of the blue and yellow classes to their respective colors. Notice how the colors look different next to each other than they do compared against the white background.
+
+    -->
+
+    <!-- Learn about Complementary Colors -->
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      .blue {
+        background-color: #0000ff;
+      }
+      .yellow {
+        background-color: #ffff00;
+      }
+      .red {
+        background-color: #ff0000;
+      }
+      .cyan {
+        background-color: #00ffff;
+      }
+      .green {
+        background-color: #00ff00;
+      }
+      .magenta {
+        background-color: #ff00ff;
+      }
+      div {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+      }
+      .container {
+        width: 200px;
+        display: flex;
+        margin: 10px;
+      }
+    </style>
+    <h1>Applied Visual Design - CSS Colors</h1>
+
+    <p>
+      Color theory and its impact on design is a deep topic and only the basics
+      are covered in the following challenges. On a website, color can draw
+      attention to content, evoke emotions, or create visual harmony. Using
+      different combinations of colors can really change the look of a website,
+      and a lot of thought can go into picking a color palette that works with
+      your content.
+    </p>
+
+    <h2>Learn about Complementary Colors</h2>
+
+    <p>
+      The color wheel is a useful tool to visualize how colors relate to each
+      other - it's a circle where similar hues are neighbors and different hues
+      are farther apart. When two colors are opposite each other on the wheel,
+      they are called complementary colors. They have the characteristic that if
+      they are combined, they "cancel" each other out and create a gray color.
+      However, when placed side-by-side, these colors appear more vibrant and
+      produce a strong visual contrast.
+    </p>
+
+    <div class="container">
+      <div class="blue"></div>
+      <div class="yellow"></div>
+    </div>
+    <div class="container">
+      <div class="red"></div>
+      <div class="cyan"></div>
+    </div>
+    <div class="container">
+      <div class="green"></div>
+      <div class="magenta"></div>
+    </div>
+
+    <!-- Applied Visual Design - Complementary Colors
+      
+    |Learn about Tertiary Colors
+
+    Computer monitors and device screens create different colors by combining amounts of red, green, and blue light. This is known as the RGB additive color model in modern color theory. Red (R), green (G), and blue (B) are called primary colors. Mixing two primary colors creates the secondary colors cyan (G + B), magenta (R + B) and yellow (R + G). You saw these colors in the Complementary Colors challenge. These secondary colors happen to be the complement to the primary color not used in their creation, and are opposite to that primary color on the color wheel. For example, magenta is made with red and blue, and is the complement to green.
+
+    Tertiary colors are the result of combining a primary color with one of its secondary color neighbors. For example, within the RGB color model, red (primary) and yellow (secondary) make orange (tertiary). This adds six more colors to a simple color wheel for a total of twelve.
+
+    There are various methods of selecting different colors that result in a harmonious combination in design. One example that can use tertiary colors is called the split-complementary color scheme. This scheme starts with a base color, then pairs it with the two colors that are adjacent to its complement. The three colors provide strong visual contrast in a design, but are more subtle than using two complementary colors.
+
+    Here are three colors created using the split-complement scheme:
+
+    Color	Hex Code
+    orange	#FF7F00
+    cyan	#00FFFF
+    raspberry	#FF007F
+
+    Change the background-color property of the orange, cyan, and raspberry classes to their respective colors. Make sure to use the hex codes and not the color names.
+-->
+    <!-- Learn about Tertiary Colors -->
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+
+      .orange {
+        background-color: #ff7f00;
+      }
+
+      .cyan {
+        background-color: #FFFF000;
+      }
+
+      .raspberry {
+        background-color: #ff007f;
+      }
+
+      div {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 5px;
+      }
+    </style>
+
+    <h2>Learn about Tertiary Colors</h2>
+
+    <p>
+      Tertiary colors are the result of combining a primary color with one of
+      its secondary color neighbors. For example, within the RGB color model,
+      red (primary) and yellow (secondary) make orange (tertiary). This adds six
+      more colors to a simple color wheel for a total of twelve.
+    </p>
+
+    <div class="orange"></div>
+    <div class="cyan"></div>
+    <div class="raspberry"></div>
+  </body>
+</html>

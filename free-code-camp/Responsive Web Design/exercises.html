@@ -88,9 +88,14 @@
       }
       .welcome {
         position: relative;
-        top: 300px;
+        top: 150px;
       }
       /* Push Elements Left or Right with the float Property */
+      .float_elements {
+        width: 100%;
+        position: relative;
+        top: 90px;
+      }
       #left {
         float: left;
         width: 50%;
@@ -107,23 +112,22 @@
 
       /* Change the Position of Overlapping Elements with the z-index Property */
       .container {
-        width: 50%;
+        width: 100%;
         position: absolute;
-        top: 200px;
+        top: 10px;
       }
-      div {
-        width: 60%;
-        height: 200px;
-        margin-top: 100px;
-        margin-left: 500px;
-      }
-
       .first {
+        width: 200px;
+        height: 200px;
+        margin: 50px;
         background-color: red;
         position: absolute;
         z-index: 2;
       }
       .second {
+        width: 200px;
+        height: 200px;
+        margin: 50px;
         background-color: blue;
         position: absolute;
         left: 40px;
@@ -136,32 +140,11 @@
         background-color: blue;
         height: 100px;
         width: 100px;
-        margin: 50px auto;
+        margin: 15px auto;
       }
     </style>
   </head>
   <body>
-    <!-- Applied Visual Design - The margin: auto; Property
-    
-    | CSS Layout - Margins
-    The CSS margin properties are used to create space around elements, outside of any defined borders.
-
-    With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
-
-    | The auto Value
-    You can set the margin property to auto to horizontally center the element within its container.
-
-    The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.
-      
-    | Center an Element Horizontally Using the margin Property
-
-    Another positioning technique is to center a block element horizontally. One way to do this is to set its margin to a value of auto.
-
-    This method works for images, too. Images are inline elements by default, but can be changed to block elements when you set the display property to block.
-
-    - Center the div on the page by adding a margin property with a value of auto.
-
-  -->
     <!-- Center the div on the page by adding a margin property with a value of auto -->
     <div class="margin_0_auto">Margin 0 auto</div>
 
@@ -172,14 +155,16 @@
     </div>
 
     <!-- Push Elements Left or Right with the float Property -->
-    <section id="left">
-      <h2>Content</h2>
-      <p>Good stuff</p>
-    </section>
-    <aside id="right">
-      <h2>Sidebar</h2>
-      <p>Links</p>
-    </aside>
+    <div class="float_elements">
+      <section id="left">
+        <h2>Content</h2>
+        <p>Good stuff</p>
+      </section>
+      <aside id="right">
+        <h2>Sidebar</h2>
+        <p>Links</p>
+      </aside>
+    </div>
 
     <!-- Lock an Element to the Browser Window with Fixed Positioning -->
     <header>
@@ -194,14 +179,15 @@
     <p>I shift up when the #navbar is fixed to the browser window.</p>
 
     <!-- Lock an Element to its Parent with Absolute Positioning -->
-    <h1 class="welcome">Welcome!</h1>
-    <section>
-      <form id="searchbar">
-        <label for="search">Search:</label>
-        <input type="search" id="search" name="search" />
-        <input type="submit" name="submit" value="Go!" />
-      </form>
-    </section>
+    <div>
+      <section>
+        <form id="searchbar">
+          <label for="search">Search:</label>
+          <input type="search" id="search" name="search" />
+          <input type="submit" name="submit" value="Go!" />
+        </form>
+      </section>
+    </div>
 
     <!-- Change an Element's Relative Position -->
     <h1>On Being Well-Positioned</h1>
