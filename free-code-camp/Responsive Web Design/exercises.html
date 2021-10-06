@@ -63,10 +63,33 @@
       section {
         position: relative;
       }
+
+      /* Lock an Element to the Browser Window with Fixed Positioning */
+      body {
+        min-height: 150vh;
+      }
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #767676;
+      }
+      nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;
+      }
+      nav li {
+        display: inline;
+        margin-right: 20px;
+      }
+      a {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-    <!-- Applied Visual Design - CSS Absolute Position
+    <!-- Applied Visual Design - CSS Fixed Position
     
     CSS Layout - The position Property
     The position property specifies the type of positioning method used for an element.
@@ -80,23 +103,31 @@
     sticky
     Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
 
-    position: absolute;
-    
-    An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+      position: fixed;
+    An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
 
-    However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+    A fixed element does not leave a gap in the page where it would normally have been located.
 
-    Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+    | Lock an Element to the Browser Window with Fixed Positioning
 
-    - Lock an Element to its Parent with Absolute Positioning
+    The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
 
-    The next option for the CSS position property is absolute, which locks the element in place relative to its parent container. Unlike the relative position, this removes the element from the normal flow of the document, so surrounding items ignore it. The CSS offset properties (top or bottom and left or right) are used to adjust the position.
+    One key difference between the fixed and absolute positions is that an element with a fixed position won't move when the user scrolls.
 
-    One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor. If you forget to add a position rule to the parent item, (this is typically done using position: relative;), the browser will keep looking up the chain and ultimately default to the body tag.
-
-    | Lock the #searchbar element to the top-right of its section parent by declaring its position as absolute. Give it top and right offsets of 50 pixels each.
+    The navigation bar in the code is labeled with an id of navbar. Change its position to fixed, and offset it 0 pixels from the top and 0 pixels from the left. After you have added the code, scroll the preview window to see how the navigation stays in place.
 
   -->
+    <!-- Lock an Element to the Browser Window with Fixed Positioning -->
+    <header>
+      <h1>Welcome!</h1>
+      <nav id="navbar">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <p>I shift up when the #navbar is fixed to the browser window.</p>
 
     <!-- Lock an Element to its Parent with Absolute Positioning -->
     <h1>Welcome!</h1>
