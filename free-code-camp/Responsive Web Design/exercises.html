@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Web Design Course - freeCodeCamp - Exercises</title>
     <style>
+      /* Containers - <div>*/
+      .container {
+        width: 100%;
+        min-height: 100px;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
       /* Headings */
       h1 {
         font-size: 68px;
@@ -59,6 +67,7 @@
         position: absolute;
         top: 50px;
         right: 50px;
+        background-color: purple;
       }
       section {
         position: relative;
@@ -86,10 +95,7 @@
       a {
         text-decoration: none;
       }
-      .welcome {
-        position: relative;
-        top: 150px;
-      }
+
       /* Push Elements Left or Right with the float Property */
       .float_elements {
         width: 100%;
@@ -111,11 +117,6 @@
       }
 
       /* Change the Position of Overlapping Elements with the z-index Property */
-      .container {
-        width: 100%;
-        position: absolute;
-        top: 10px;
-      }
       .first {
         width: 200px;
         height: 200px;
@@ -145,66 +146,165 @@
     </style>
   </head>
   <body>
-    <!-- Center the div on the page by adding a margin property with a value of auto -->
-    <div class="margin_0_auto">Margin 0 auto</div>
+    <!-- Change an Element's Relative Position
+  CSS treats each HTML element as its own box, which is usually referred to as the CSS Box Model. Block-level items automatically start on a new line (think headings, paragraphs, and divs) while inline items sit within surrounding content (like images or spans). The default layout of elements in this way is called the normal flow of a document, but CSS offers the position property to override it.
 
-    <!-- Change the Position of Overlapping Elements with the z-index Property -->
+  When the position of an element is set to relative, it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of left or right, and top or bottom. These say how many pixels, percentages, or ems to move the item away from where it is normally positioned. The following example moves the paragraph 10 pixels away from the bottom:
+
+  p {
+    position: relative;
+    bottom: 10px;
+  }
+  Changing an element's position to relative does not remove it from the normal flow - other elements around it still behave as if that item were in its default position.
+
+  Note: Positioning gives you a lot of flexibility and power over the visual layout of a page. It's good to remember that no matter the position of elements, the underlying HTML markup should be organized and make sense when read from top to bottom. This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.
+
+  Change the position of the h2 to relative, and use a CSS offset to move it 15 pixels away from the top of where it sits in the normal flow. Notice there is no impact on the positions of the surrounding h1 and p elements. -->
+
+    <div class="container" style="margin-top: 50px">
+      <h2 style="font-size: 20px">Change an Element's Relative Position</h2>
+      <h1 style="font-size: 28px">On Being Well-Positioned</h1>
+      <h2 class="position-relative">Move me!</h2>
+      <h2 class="css_offsets">Move me!</h2>
+      <p>I still think the h2 is where it normally sits.</p>
+    </div>
+
+    <!-- Center an Element Horizontally Using the margin Property
+  Another positioning technique is to center a block element horizontally. One way to do this is to set its margin to a value of auto.
+
+  This method works for images, too. Images are inline elements by default, but can be changed to block elements when you set the display property to block.
+
+  Center the div on the page by adding a margin property with a value of auto. -->
+    <h2 style="font-size: 20px">
+      Center the div on the page by adding a margin property with a value of
+      auto
+    </h2>
     <div class="container">
-      <div class="first"></div>
-      <div class="second"></div>
+      <div class="margin_0_auto">Margin 0 auto</div>
     </div>
 
-    <!-- Push Elements Left or Right with the float Property -->
-    <div class="float_elements">
-      <section id="left">
-        <h2>Content</h2>
-        <p>Good stuff</p>
-      </section>
-      <aside id="right">
-        <h2>Sidebar</h2>
-        <p>Links</p>
-      </aside>
+    <!-- Lock an Element to the Browser Window with Fixed Positioning 
+  The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
+
+  One key difference between the fixed and absolute positions is that an element with a fixed position won't move when the user scrolls.
+
+  The navigation bar in the code is labeled with an id of navbar. Change its position to fixed, and offset it 0 pixels from the top and 0 pixels from the left. After you have added the code, scroll the preview window to see how the navigation stays in place.-->
+    <h2 style="font-size: 20px">
+      Lock an Element to the Browser Window with Fixed Positioning
+    </h2>
+    <div class="container">
+      <header>
+        <h1 class="">Welcome!</h1>
+        <nav id="navbar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <p>I shift up when the #navbar is fixed to the browser window.</p>
     </div>
 
-    <!-- Lock an Element to the Browser Window with Fixed Positioning -->
-    <header>
-      <h1 class="welcome">Welcome!</h1>
-      <nav id="navbar">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <p>I shift up when the #navbar is fixed to the browser window.</p>
+    <!-- Adjust the Hover State of an Anchor Tag
+  This challenge will touch on the usage of pseudo-classes. A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element.
 
-    <!-- Lock an Element to its Parent with Absolute Positioning -->
+  For example, the styling of an anchor tag can be changed for its hover state using the :hover pseudo-class selector. Here's the CSS to change the color of the anchor tag to red during its hover state:
+
+  a:hover {
+    color: red;
+  }
+  The code editor has a CSS rule to style all a tags black. Add a rule so that when the user hovers over the a tag, the color is blue.-->
+    <h2 style="font-size: 20px">Adjust the Hover State of an Anchor Tag</h2>
+    <div class="container">
+      <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+    </div>
+
+    <!-- Set the font-size for Multiple Heading Elements
+  The font-size property is used to specify how large the text is in a given element. This rule can be used for multiple elements to create visual consistency of text on a page. In this challenge, you'll set the values for all h1 through h6 tags to balance the heading sizes.
+
+  In the style tags, set the font-size of the:
+
+  h1 tag to 68px.
+  h2 tag to 52px.
+  h3 tag to 40px.
+  h4 tag to 32px.
+  h5 tag to 21px.
+  h6 tag to 14px. -->
+    <h2 style="font-size: 20px">
+      Set the font-size for Multiple Heading Elements
+    </h2>
+    <div class="container">
+      <h1>This is h1 text</h1>
+      <h2>This is h2 text</h2>
+      <h3>This is h3 text</h3>
+      <h4>This is h4 text</h4>
+      <h5>This is h5 text</h5>
+      <h6>This is h6 text</h6>
+    </div>
+
+    <!-- Push Elements Left or Right with the float Property
+    The next positioning tool does not actually use position, but sets the float property of an element. Floating elements are removed from the normal flow of a document and pushed to either the left or right of their containing parent element. It's commonly used with the width property to specify how much horizontal space the floated element requires.
+
+    The given markup would work well as a two-column layout, with the section and aside elements next to each other. Give the #left item a float of left and the #right item a float of right. -->
+    <h2 style="font-size: 20px">
+      Push Elements Left or Right with the float Property
+    </h2>
     <div>
-      <section>
-        <form id="searchbar">
-          <label for="search">Search:</label>
-          <input type="search" id="search" name="search" />
-          <input type="submit" name="submit" value="Go!" />
-        </form>
-      </section>
+      <div class="container">
+        <section id="left">
+          <h2>Content</h2>
+          <p>Good stuff</p>
+        </section>
+        <aside id="right">
+          <h2>Sidebar</h2>
+          <p>Links</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- Change an Element's Relative Position -->
-    <h1>On Being Well-Positioned</h1>
-    <h2 class="position-relative">Move me!</h2>
-    <h2 class="css_offsets">Move me!</h2>
+    <div>
+      <!-- Lock an Element to its Parent with Absolute Positioning
+      
+    The next option for the CSS position property is absolute, which locks the element in place relative to its parent container. Unlike the relative position, this removes the element from the normal flow of the document, so surrounding items ignore it. The CSS offset properties (top or bottom and left or right) are used to adjust the position.
 
-    <p>I still think the h2 is where it normally sits.</p>
+    One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor. If you forget to add a position rule to the parent item, (this is typically done using position: relative;), the browser will keep looking up the chain and ultimately default to the body tag.
 
-    <!-- Hover -->
-    <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+    Lock the #searchbar element to the top-right of its section parent by declaring its position as absolute. Give it top and right offsets of 50 pixels each. -->
 
-    <!-- Headings -->
-    <h1>This is h1 text</h1>
-    <h2>This is h2 text</h2>
-    <h3>This is h3 text</h3>
-    <h4>This is h4 text</h4>
-    <h5>This is h5 text</h5>
-    <h6>This is h6 text</h6>
+      <div class="container" style="margin-top: 100px">
+        <h2 style="font-size: 20px">
+          Lock an Element to its Parent with Absolute Positioning
+        </h2>
+        <section>
+          <h3>Welcome</h3>
+          <form id="searchbar">
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" />
+            <input type="submit" name="submit" value="Go!" />
+          </form>
+        </section>
+      </div>
+
+      <!-- Change the Position of Overlapping Elements with the z-index Property 
+    When elements are positioned to overlap (i.e. using position: absolute | relative | fixed | sticky), the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the z-index property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the z-index property of an element move it higher in the stack than those with lower values.
+
+    Add a z-index property to the element with the class name of first (the red rectangle) and set it to a value of 2 so it covers the other element (blue rectangle).-->
+      <h2 style="font-size: 20px">
+        Change the Position of Overlapping Elements with the z-index Property
+      </h2>
+      <div class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+      </div>
+    </div>
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
+    <!-- Add -->
   </body>
 </html>
