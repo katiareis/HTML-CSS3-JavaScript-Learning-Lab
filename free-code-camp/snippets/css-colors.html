@@ -160,7 +160,7 @@
 
     <!-- Applied Visual Design - Learn about HSL Property
 
-      Adjust the Hue of a Color
+    | Adjust the Hue of a Color
 
     Colors have several characteristics including hue, saturation, and lightness. CSS3 introduced the hsl() property as an alternative way to pick a color by directly stating these characteristics.
 
@@ -229,14 +229,17 @@
 
     - Use a linear-gradient() for the div element's background, and set it from a direction of 35 degrees to change the color from #CCFFFF to #FFCCCC.-->
 
+    <h1>Applied Visual Design - CSS Linear Gradient</h1>
     <h2>Learn about CSS Gradients</h2>
     <p>
       CSS gradients let you display smooth transitions between two or more
       specified colors.
     </p>
-    <p>CSS defines two types of gradients:</p>
-    <p>Linear Gradients (goes down/up/left/right/diagonally)</p>
-    <p>Gradients (defined by their center)</p>
+    <ul>
+      CSS defines two types of gradients:
+    </ul>
+    <li>Linear Gradients (goes down/up/left/right/diagonally)</li>
+    <li>Gradients (defined by their center)</li>
 
     <style>
       .gradient {
@@ -266,8 +269,6 @@
     If every two color stop values are the same color, the blending isn't noticeable because it's between the same color, followed by a hard transition to the next color, so you end up with stripes.
 
     - Make stripes by changing the repeating-linear-gradient() to use a gradient angle of 45deg, then set the first two color stops to yellow, and finally the second two color stops to black.
-
-
   -->
 
     <style>
@@ -300,7 +301,18 @@
     </style>
 
     <h2>Use a CSS Linear Gradient to Create a Striped Element</h2>
+    <h3>Repeating a linear-gradient</h3>
+    <p>
+      The repeating-linear-gradient() function is used to repeat linear
+      gradients:
+    </p>
+
     <div class="striped_gradient"></div>
+    <h2>
+      Use a CSS Linear Gradient to Create a black-and-yellow Striped Element
+    </h2>
+
+    <h3>Repeating a linear-gradient</h3>
     <div class="stripes"></div>
 
     <!-- Applied Visual Design - CSS Background Image
@@ -311,9 +323,19 @@
 
       Using the url of https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png, set the background of the whole page with the body selector.
     -->
-
+    <h1>Applied Visual Design - CSS Background Image</h1>
     <h2>Learn about CSS Background Image</h2>
     <h3>Create Texture by Adding a Subtle Pattern as a Background Image</h3>
+    <p>
+      The background-image property specifies an image to use as the background
+      of an element. By default, the image is repeated so it covers the entire
+      element.
+    </p>
+    <p>
+      Note: When using a background image, use an image that does not disturb
+      the text. The background image can also be set for specific elements, like
+      the p element:
+    </p>
     <style>
       .pseudo_body {
         border-radius: 20px;
