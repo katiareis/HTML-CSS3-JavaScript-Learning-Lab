@@ -56,9 +56,11 @@
       <div class="ball" id="ball2"></div>
     </div>
 
-    <!-- Use the CSS Transform scale Property to Scale an Element on Hover
+    <!-- Applied Visual Design - CSS Transform Scale Property
+      
+      | Use the CSS Transform scale Property to Scale an Element on Hover
 
-    | The transform property has a variety of functions that let you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as :hover that specify a certain state of an element, the transform property can easily add interactivity to your elements.
+    The transform property has a variety of functions that let you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as :hover that specify a certain state of an element, the transform property can easily add interactivity to your elements.
 
     Here's an example to scale the paragraph elements to 2.1 times their original size when a user hovers over them:
 
@@ -84,7 +86,9 @@
       <div class="scale-on-hover"></div>
     </div>
 
-    <!-- Use the CSS Transform Property skewX to Skew an Element Along the X-Axis
+    <!-- Applied Visual Design - CSS Transform Property SkewX - the X-Axis
+      
+      | Use the CSS Transform Property skewX to Skew an Element Along the X-Axis
       
     The next function of the transform property is skewX(), which skews the selected element along its X (horizontal) axis by a given degree.
 
@@ -117,7 +121,9 @@
       <div id="bottom_blue"></div>
     </div>
 
-    <!-- Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis
+    <!-- Applied Visual Design - CSS Transform Property skewY - the Y-Axis
+      
+      | Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis
     Given that the skewX() function skews the selected element along the X-axis by a given degree, it is no surprise that the skewY() property skews an element along the Y (vertical) axis.
 
     Skew the element with the id of top -6 degrees along the Y-axis by using the transform property. -->
@@ -145,17 +151,20 @@
       <div id="bottom"></div>
     </div>
 
-    <!-- Create a Graphic Using CSS
-  By manipulating different selectors and properties, you can make interesting shapes. One of the easier ones to try is a crescent moon shape. For this challenge you need to work with the box-shadow property that sets the shadow of an element, along with the border-radius property that controls the roundness of the element's corners.
+    <!-- Applied Visual Design - CSS Transform Graphic - The Moon
+      
+      | Create a Graphic Using CSS - The Moon
 
-  You will create a round, transparent object with a crisp shadow that is slightly offset to the side - the shadow is actually going to be the moon shape you see.
+    By manipulating different selectors and properties, you can make interesting shapes. One of the easier ones to try is a crescent moon shape. For this challenge you need to work with the box-shadow property that sets the shadow of an element, along with the border-radius property that controls the roundness of the element's corners.
 
-  In order to create a round object, the border-radius property should be set to a value of 50%.
+    You will create a round, transparent object with a crisp shadow that is slightly offset to the side - the shadow is actually going to be the moon shape you see.
 
-  You may recall from an earlier challenge that the box-shadow property takes values for offset-x, offset-y, blur-radius, spread-radius and a color value in that order. The blur-radius and spread-radius values are optional.
+    In order to create a round object, the border-radius property should be set to a value of 50%.
 
-  Manipulate the square element in the editor to create the moon shape. First, change the background-color to transparent, then set the border-radius property to 50% to make the circular shape. Finally, change the box-shadow property to set the offset-x to 25px, the offset-y to 10px, blur-radius to 0, spread-radius to 0, and color to blue. -->
-    <h3>Create a Graphic Using CSS</h3>
+    You may recall from an earlier challenge that the box-shadow property takes values for offset-x, offset-y, blur-radius, spread-radius and a color value in that order. The blur-radius and spread-radius values are optional.
+
+    Manipulate the square element in the editor to create the moon shape. First, change the background-color to transparent, then set the border-radius property to 50% to make the circular shape. Finally, change the box-shadow property to set the offset-x to 25px, the offset-y to 10px, blur-radius to 0, spread-radius to 0, and color to blue. -->
+    <h3>Create a Graphic Using CSS - The Moon</h3>
     <style>
       .center {
         position: relative;
@@ -176,7 +185,9 @@
       <div class="center"></div>
     </div>
 
-    <!-- Create a More Complex Shape Using CSS and HTML
+    <!-- Applied Visual Design - Complex Shape Using CSS and HTML - The Heart
+      
+      | Create a More Complex Shape Using CSS and HTML - The Heart
   One of the most popular shapes in the world is the heart shape, and in this challenge you'll create one using pure CSS. But first, you need to understand the ::before and ::after pseudo-elements. These pseudo-elements are used to add something before or after a selected element. In the following example, a ::before pseudo-element is used to add a rectangle to an element with the class heart:
 
   .heart::before {
@@ -196,8 +207,7 @@
   - Next, target the element with the class heart (just heart) and fill in the transform property. Use the rotate() function with -45 degrees.
 
   - Finally, in the heart::before selector, set its content property to an empty string. -->
-
-    <h3>Create a More Complex Shape Using CSS and HTML</h3>
+    <h3>Create a More Complex Shape Using CSS and HTML - The Heart</h3>
     <style>
       .heart {
         position: relative;
@@ -235,7 +245,66 @@
     <div class="container">
       <div class="heart"></div>
     </div>
-    <!-- Add -->
+
+    <!-- Applied Visual Design - CSS @keyframes and animation Properties
+      
+      | Learn How the CSS @keyframes and animation Properties Work
+To animate an element, you need to know about the animation properties and the @keyframes rule. The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation. There are eight animation properties in total. This challenge will keep it simple and cover the two most important ones first:
+
+animation-name sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+
+animation-duration sets the length of time for the animation.
+
+@keyframes is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. If you compare this to a movie, the CSS properties for 0% is how the element displays in the opening scene. The CSS properties for 100% is how the element appears at the end, right before the credits roll. Then CSS applies the magic to transition the element over the given duration to act out the scene. Here's an example to illustrate the usage of @keyframes and the animation properties:
+
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+
+@keyframes colorful {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+For the element with the anim id, the code snippet above sets the animation-name to colorful and sets the animation-duration to 3 seconds. Then the @keyframes rule links to the animation properties with the name colorful. It sets the color to blue at the beginning of the animation (0%) which will transition to yellow by the end of the animation (100%). You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.
+
+Create an animation for the element with the id rect, by setting the animation-name to rainbow and the animation-duration to 4 seconds. Next, declare a @keyframes rule, and set the background-color at the beginning of the animation (0%) to blue, the middle of the animation (50%) to green, and the end of the animation (100%) to yellow. -->
+    <h3>Learn How the CSS @keyframes and animation Properties Work</h3>
+    <style>
+      .raibow {
+        height: 40px;
+        width: 70%;
+        background: black;
+        margin: 50px auto;
+        border-radius: 5px;
+      }
+
+      #rect {
+        animation-name: rainbow;
+        animation-duration: 4s;
+      }
+
+      @keyframes rainbow {
+        0% {
+          background-color: blue;
+        }
+        50% {
+          background-color: green;
+        }
+        100% {
+          background-color: yellow;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div class="raibow" id="rect"></div>
+    </div>
+
     <!-- Add -->
     <!-- Add -->
     <!-- Add -->
