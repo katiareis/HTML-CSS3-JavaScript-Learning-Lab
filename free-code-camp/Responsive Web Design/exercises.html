@@ -160,7 +160,6 @@
   Note: Positioning gives you a lot of flexibility and power over the visual layout of a page. It's good to remember that no matter the position of elements, the underlying HTML markup should be organized and make sense when read from top to bottom. This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.
 
   Change the position of the h2 to relative, and use a CSS offset to move it 15 pixels away from the top of where it sits in the normal flow. Notice there is no impact on the positions of the surrounding h1 and p elements. -->
-
     <div class="container" style="margin-top: 50px">
       <h2 style="font-size: 20px">Change an Element's Relative Position</h2>
       <h1 style="font-size: 28px">On Being Well-Positioned</h1>
@@ -270,7 +269,6 @@
     One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor. If you forget to add a position rule to the parent item, (this is typically done using position: relative;), the browser will keep looking up the chain and ultimately default to the body tag.
 
     Lock the #searchbar element to the top-right of its section parent by declaring its position as absolute. Give it top and right offsets of 50 pixels each. -->
-
       <div class="container" style="margin-top: 100px">
         <h2 style="font-size: 20px">
           Lock an Element to its Parent with Absolute Positioning
