@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit List</title>
+  </head>
+  <body>
+    <main>
+      <h2>JavaScript Arrays + For Loop</h2>
+
+      <p>The best way to loop through an array is using a standard for loop:</p>
+
+      <p id="demo"></p>
+
+      <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+          text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+      </script>
+      <!-- You can also use the Array.forEach() function
+
+        <script>
+          const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+          let text = "<ul>";
+          fruits.forEach(myFunction);
+          text += "</ul>";
+          document.getElementById("demo").innerHTML = text;
+
+          function myFunction(value) {
+            text += "<li>" + value + "</li>";
+          } 
+        </script> 
+      -->
+    </main>
+  </body>
+</html>
