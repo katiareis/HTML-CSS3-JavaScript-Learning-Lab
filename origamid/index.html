@@ -1,26 +1,64 @@
-<!DOCTYPE html><!-- Declara que se trata se um documento HTML5 -->
-<html lang="en"> <!-- A tag HTML é a raíz do documento -->
-<head> <!-- A tag head é onde contém meta dados sobre a página HTML -->
-    <meta charset="UTF-8"> <!-- Define a acentuação -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define compatibilidade de tamanho do site com os dispositivos -->
-    <title>Estrutura Web</title> <!-- A tag title é o título da página -->
-</head>
-<!-- Principais Tags -->
-<body> <!-- A tag body é o container onde o site em si é visualizado no navegador-->
-    <h1>Tag utilizada para definir o título principal / de maior importância semânntica na página</h1>
-    <h2>Tag utilizada para definir títulos de menor importância semânntica em relação a H1</h2>
-    <h3>Tag utilizada para definir títulos de menor importância semânntica em relação a H2</h3>
-    <h4>Tag utilizada para definir títulos de menor importância semânntica em relação a H3</h4>
-    <h5>Tag utilizada para definir títulos de menor importância semânntica em relação a H4</h5>
-    <h6>Tag utilizada para definir títulos de menor importância semânntica em relação a H5</h6>
-    
-    <p>Tag utilizada para criar parágrafos</p>
+<!DOCTYPE html>
+<html lang="en">
 
-    <p>A tag <strong>serve para marcar um texto</strong> como importante</p>
-    <p>A tag <em>serve para dar enfase</em> em alguma palavra</p>
-    <p>A tag <i>serve para definir uma palavra</i> em itálico</p>
-    <p>A tag <b>serve para definir uma palavra</b> em negrito</p>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML e CSS para Iniciantes - Posicionamento - Bikcraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <img class="header-img" src="./img/bikcraft.svg" alt="Bikcraft">
+
+    <div class="menu">
+        <a href="/">Sobre</a>
+        <a href="/">Produtos</a>
+        <a href="/">Lojas</a>
+        <a href="/">Contato</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Introduction -->
+        <div class="intro">
+            <span class="detail"></span>
+            <h1>Bicicletas Feitas a Mão</h1>
+            <p>A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios da marca.</p>
+            <a class="btn" href="\">Ver Mais</a>
+        </div>
+        <div class="intro-img">
+            <img src="./img/bicicleta.jpg" alt="Bicicleta Bikcraft preta">
+        </div>
+        <!-- Advertising -->
+        <h2 class="advertisement">Vantagens Bikcraft</h2>
+
+        <div class="ad-list">
+            <div class="item">
+                <img src="./img/eletrica.svg">
+                <h3>Motor Elétrico</h3>
+                <p>Permite você viajar distâncias inimaginaveis com a sua bike.</p>
+            </div>
+            <div class="item">
+                <img src="./img/velocidade.svg">
+                <h3>40 km/h</h3>
+                <p>A mais rápida bicicleta elétrica disponível hoje no mercado.</p>
+            </div>
+            <div class="item">
+                <img src="./img/rastreador.svg">
+                <h3>Rastreador</h3>
+                <p>Rastreador e sistema anti-furto para garantir o seu sossego..</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Bikcraft. Alguns Direitos Reservados.</p>
+    </footer>
 </body>
+
 </html>
